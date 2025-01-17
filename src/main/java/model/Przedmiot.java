@@ -1,4 +1,4 @@
-package main.java.model;
+package model;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -9,13 +9,20 @@ public class Przedmiot {
     private String nazwa;
     private String kodPrzedmiotu;
     private int idPrzedmiotu;
-    private Set<RodzajGrupy> rodzajeGrup; // Zmienione na Set<RodzajGrupy>
+    private Set<RodzajGrupy> rodzajeGrup;
     private List<Grupa> grupy;
 
     public Przedmiot(String nazwa, String kodPrzedmiotu) {
+        if (nazwa == null || nazwa.trim().isEmpty()) {
+            throw new IllegalArgumentException("Nazwa przedmiotu nie może być pusta");
+        }
+        if (kodPrzedmiotu == null || kodPrzedmiotu.trim().isEmpty()) {
+            throw new IllegalArgumentException("Kod przedmiotu nie może być pusty");
+        }
+
         this.nazwa = nazwa;
         this.kodPrzedmiotu = kodPrzedmiotu;
-        this.rodzajeGrup = new HashSet<>(); // Inicjalizacja jako HashSet
+        this.rodzajeGrup = new HashSet<>();
         this.grupy = new ArrayList<>();
     }
 
@@ -24,6 +31,9 @@ public class Przedmiot {
     }
 
     public void setNazwa(String nazwa) {
+        if (nazwa == null || nazwa.trim().isEmpty()) {
+            throw new IllegalArgumentException("Nazwa przedmiotu nie może być pusta");
+        }
         this.nazwa = nazwa;
     }
 
@@ -36,21 +46,30 @@ public class Przedmiot {
     }
 
     public void setIdPrzedmiotu(int idPrzedmiotu) {
+        if (idPrzedmiotu <= 0) {
+            throw new IllegalArgumentException("ID przedmiotu musi być większe od 0");
+        }
         this.idPrzedmiotu = idPrzedmiotu;
     }
 
     public Set<RodzajGrupy> getRodzajeGrup() {
-        return rodzajeGrup;
+        return new HashSet<>(rodzajeGrup);
     }
 
     public List<Grupa> getGrupy() {
-        return grupy;
+        return new ArrayList<>(grupy);
     }
 
     public void setGrupy(List<Grupa> grupy) {
+        if (grupy == null) {
+            throw new IllegalArgumentException("Lista grup nie może być null");
+        }
+
         this.grupy = new ArrayList<>(grupy);
-        // Ustaw referencję do przedmiotu w każdej grupie
         for (Grupa grupa : this.grupy) {
+            if (grupa == null) {
+                throw new IllegalArgumentException("Grupa w liście nie może być null");
+            }
             grupa.setPrzedmiot(this);
         }
         aktualizujRodzajeGrup();
@@ -59,21 +78,32 @@ public class Przedmiot {
     private void aktualizujRodzajeGrup() {
         rodzajeGrup.clear();
         for (Grupa grupa : grupy) {
-            if (grupa.getRodzajGrupy() != null) {
-                rodzajeGrup.add(grupa.getRodzajGrupy());
+            if (grupa.getRodzajGrupy() == null) {
+                throw new IllegalStateException("Rodzaj grupy nie może być null");
             }
-        }
-    }
-
-    // Dodatkowe metody pomocnicze
-    public void dodajGrupe(Grupa grupa) {
-        if (!grupy.contains(grupa)) {
-            grupy.add(grupa);
             rodzajeGrup.add(grupa.getRodzajGrupy());
         }
     }
 
+    public void dodajGrupe(Grupa grupa) {
+        if (grupa == null) {
+            throw new IllegalArgumentException("Grupa nie może być null");
+        }
+        if (grupa.getRodzajGrupy() == null) {
+            throw new IllegalArgumentException("Rodzaj grupy nie może być null");
+        }
+
+        if (!grupy.contains(grupa)) {
+            grupy.add(grupa);
+            rodzajeGrup.add(grupa.getRodzajGrupy());
+            grupa.setPrzedmiot(this);
+        }
+    }
+
     public boolean czyMaGrupeTypu(RodzajGrupy rodzaj) {
+        if (rodzaj == null) {
+            throw new IllegalArgumentException("Rodzaj grupy nie może być null");
+        }
         return rodzajeGrup.contains(rodzaj);
     }
 }

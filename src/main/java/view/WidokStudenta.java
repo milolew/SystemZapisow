@@ -1,4 +1,4 @@
-package main.java.view;
+package view;
 
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import main.java.model.*;
+import model.*;
 
 public class WidokStudenta implements WidokUzytkownika {
     private final WyswietlanieDanych wyswietlanieDanych;
@@ -141,14 +141,18 @@ public class WidokStudenta implements WidokUzytkownika {
         }
     }
 
-    private String getDzienTygodnia(int dzien) {
+    public String getDzienTygodnia(int dzien) {
+        if (dzien < 1 || dzien > 5) {
+            throw new IllegalArgumentException("Nieprawidłowy numer dnia tygodnia: " + dzien);
+        }
+
         return switch (dzien) {
             case 1 -> "Poniedziałek";
             case 2 -> "Wtorek";
             case 3 -> "Środa";
             case 4 -> "Czwartek";
             case 5 -> "Piątek";
-            default -> "Nieznany dzień";
+            default -> throw new IllegalArgumentException("Nieobsługiwany dzień tygodnia: " + dzien);
         };
     }
 

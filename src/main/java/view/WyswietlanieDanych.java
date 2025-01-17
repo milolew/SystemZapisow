@@ -1,11 +1,11 @@
-package main.java.view;
+package view;
 
 import java.util.List;
 
-import main.java.model.Grupa;
-import main.java.model.Kierunek;
-import main.java.model.Przedmiot;
-import main.java.model.TuraZapisow;
+import model.Grupa;
+import model.Kierunek;
+import model.Przedmiot;
+import model.TuraZapisow;
 
 public interface WyswietlanieDanych {
     /**

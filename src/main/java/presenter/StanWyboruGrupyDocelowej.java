@@ -1,4 +1,4 @@
-package main.java.presenter;
+package presenter;
 
 // Stan dla wyboru grupy docelowej przy przenoszeniu studentów
 public class StanWyboruGrupyDocelowej extends StanPracownika {

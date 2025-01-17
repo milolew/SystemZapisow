@@ -1,6 +1,6 @@
-package main.java.presenter;
+package presenter;
 
-import main.java.model.Grupa;
+import model.Grupa;
 
 import java.util.List;
 

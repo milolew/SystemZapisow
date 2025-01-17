@@ -1,4 +1,4 @@
-package main.java.presenter;
+package presenter;
 
 /**
  * Interfejs definiujący interakcje użytkownika z systemem

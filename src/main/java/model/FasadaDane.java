@@ -1,4 +1,4 @@
-package main.java.model;
+package model;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -116,5 +116,17 @@ public class FasadaDane implements PobranieDanych {
     @Override
     public Przedmiot pobierzPrzedmiot(int idPrzedmiotu) {
         return przedmioty.get(idPrzedmiotu);
+    }
+
+    public void dodajStudenta(Student student) {
+        this.studenci.put(student.getNrAlbumu(), student);
+    }
+
+    public void dodajGrupe(Grupa grupa) {
+        this.grupy.put(grupa.getIdGrupy(), grupa);
+    }
+
+    public void aktualizujGrupe(Grupa grupa) {
+        this.grupy.put(grupa.getIdGrupy(), grupa);
     }
 }

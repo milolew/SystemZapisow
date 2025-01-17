@@ -1,7 +1,7 @@
-package main.java.presenter;
+package presenter;
 
-import main.java.model.*;
-import main.java.view.*;
+import model.*;
+import view.*;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -10,8 +10,11 @@ import java.util.Scanner;
 import java.util.stream.Collectors;
 
 /*
-* TODO: ogarnąć widoki żeby Głuchowskiemu się podobało
+* 2. Fasada Widok
+* 3. Przedmiot (trzeba dodać throw)
+* 4. FasadaAktualizacji
 * */
+
 
 public class PrezenterSterowanie implements InterakcjaZUzytkownikiem {
     private final Weryfikacja weryfikacja;

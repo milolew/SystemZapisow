@@ -1,6 +1,6 @@
-package main.java.presenter;
+package presenter;
 
-import main.java.model.Kierunek;
+import model.Kierunek;
 
 import java.util.List;
 

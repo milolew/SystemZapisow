@@ -1,7 +1,7 @@
-package main.java.presenter;
+package presenter;
 
-import main.java.model.Przedmiot;
-import main.java.model.TuraZapisow;
+import model.Przedmiot;
+import model.TuraZapisow;
 
 import java.util.List;
 

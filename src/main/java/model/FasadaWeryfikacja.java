@@ -1,4 +1,4 @@
-package main.java.model;
+package model;
 
 public class FasadaWeryfikacja implements Weryfikacja {
     private static final String HASLO = "password";

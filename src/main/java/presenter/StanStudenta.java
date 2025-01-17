@@ -1,6 +1,6 @@
-package main.java.presenter;
+package presenter;
 
-import main.java.view.WidokStudenta;
+import view.WidokStudenta;
 
 public abstract class StanStudenta implements StanPrezentera {
     protected final PrezenterSterowanie prezenter;

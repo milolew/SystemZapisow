@@ -1,7 +1,7 @@
-package main.java.presenter;
+package presenter;
 
-import main.java.model.Przedmiot;
-import main.java.model.RodzajGrupy;
+import model.Przedmiot;
+import model.RodzajGrupy;
 
 import java.util.List;
 

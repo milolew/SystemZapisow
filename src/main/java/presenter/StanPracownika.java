@@ -1,6 +1,6 @@
-package main.java.presenter;
+package presenter;
 
-import main.java.view.WidokPracownika;
+import view.WidokPracownika;
 
 public abstract class StanPracownika implements StanPrezentera {
     protected final PrezenterSterowanie prezenter;

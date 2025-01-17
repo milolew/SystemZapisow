@@ -1,8 +1,8 @@
-package main.java.presenter;
+package presenter;
 
-import main.java.model.Przedmiot;
-import main.java.model.RodzajGrupy;
-import main.java.model.TuraZapisow;
+import model.Przedmiot;
+import model.RodzajGrupy;
+import model.TuraZapisow;
 
 import java.util.ArrayList;
 import java.util.List;

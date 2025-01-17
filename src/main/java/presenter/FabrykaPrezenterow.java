@@ -1,9 +1,9 @@
-package main.java.presenter;
+package presenter;
 
-import main.java.view.WidokStudenta;
-import main.java.view.WidokPracownika;
-import main.java.view.WidokUzytkownika;
-import main.java.view.WyswietlanieDanych;
+import view.WidokStudenta;
+import view.WidokPracownika;
+import view.WidokUzytkownika;
+import view.WyswietlanieDanych;
 
 public class FabrykaPrezenterow {
     private final WyswietlanieDanych wyswietlanieDanych;
