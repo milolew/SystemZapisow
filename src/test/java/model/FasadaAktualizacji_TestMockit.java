@@ -177,8 +177,8 @@ public class FasadaAktualizacji_TestMockit {
     @ParameterizedTest
     @CsvSource({
             "10:00, 11:30, 12:00, 13:30, false", // Brak konfliktu
-            "10:00, 12:30, 11:00, 13:30, true",  // Konflikt - nakładające się godziny
-            "09:00, 11:00, 10:00, 12:00, true"   // Konflikt - nakładające się godziny
+            "10:00, 12:30, 11:00, 13:30, true",  // Konflikt z istniejącą grupą
+            "09:00, 11:00, 10:00, 12:00, true"   // Konflikt z istniejącą grupą
     })
     @DisplayName("Sprawdzanie konfliktów czasowych")
     void sprawdzanieKonfliktowCzasowych(
@@ -186,26 +186,33 @@ public class FasadaAktualizacji_TestMockit {
             String start2, String koniec2,
             boolean oczekiwanyKonflikt) {
 
-        // Konfiguracja czasów grup
-        grupaZrodlowa.setGodzRozpoczecia(LocalTime.parse(start1));
-        grupaZrodlowa.setGodzZakonczenia(LocalTime.parse(koniec1));
-        grupaDocelowa.setGodzRozpoczecia(LocalTime.parse(start2));
-        grupaDocelowa.setGodzZakonczenia(LocalTime.parse(koniec2));
+        // Tworzymy dodatkową grupę, którą student już ma w planie
+        Grupa istniejacaGrupa = new Grupa(
+                LocalTime.parse(start1),
+                LocalTime.parse(koniec1),
+                3,
+                grupaZrodlowa.getProwadzacy(),
+                20
+        );
+        istniejacaGrupa.setIdGrupy(3);
+        istniejacaGrupa.setRodzajGrupy(RodzajGrupy.CWICZENIA);
+        istniejacaGrupa.setPrzedmiot(new Przedmiot("Inny Przedmiot", "INY001"));
 
+        // Dodajemy studenta do grupy źródłowej
         grupaZrodlowa.dodajStudenta(student);
         student.getGrupy().add(grupaZrodlowa);
+
+        // Dodajemy istniejącą grupę do planu studenta
+        student.getGrupy().add(istniejacaGrupa);
+        istniejacaGrupa.dodajStudenta(student);
+
+        // Ustawiamy czas grupy docelowej
+        grupaDocelowa.setGodzRozpoczecia(LocalTime.parse(start2));
+        grupaDocelowa.setGodzZakonczenia(LocalTime.parse(koniec2));
 
         new Expectations() {{
             fasadaDane.pobierzStudenta(12345);
             result = student;
-
-            grupaDAO.pobierzStudentow((Grupa) any);
-            result = Arrays.asList(student);
-            minTimes = 0;
-
-            przedmiotDAO.pobierzWszystkiePrzedmioty();
-            result = Arrays.asList(przedmiot);
-            minTimes = 0;
         }};
 
         if (oczekiwanyKonflikt) {

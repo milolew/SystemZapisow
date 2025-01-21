@@ -107,18 +107,15 @@ public class FasadaAktualizacji_Test {
     @Test
     @DisplayName("Przeniesienie studenta - przypadek pozytywny")
     void przeniesStudentaSuccess() {
-        // Given
         grupaZrodlowa.dodajStudenta(student);
         student.getGrupy().add(grupaZrodlowa);
 
-        // When
         boolean result = fasada.przeniesStudenta(
                 grupaZrodlowa.getIdGrupy(),
                 grupaDocelowa.getIdGrupy(),
                 student.getNrAlbumu()
         );
 
-        // Then
         assertTrue(result);
         assertEquals(0, grupaZrodlowa.getZajeteMiejsca());
         assertEquals(1, grupaDocelowa.getZajeteMiejsca());
@@ -127,11 +124,11 @@ public class FasadaAktualizacji_Test {
     /**
      * Test parametryzowany sprawdzający różne scenariusze konfliktów czasowych
      * między grupami przy przenoszeniu studenta
-     * @param start1 Godzina rozpoczęcia grupy źródłowej
-     * @param koniec1 Godzina zakończenia grupy źródłowej
-     * @param start2 Godzina rozpoczęcia grupy docelowej
-     * @param koniec2 Godzina zakończenia grupy docelowej
-     * @param oczekiwanyKonflikt Czy powinien wystąpić konflikt czasowy
+     * @param startIstniejaca  Godzina rozpoczęcia zajęć grupy już istniejącej w planie studenta
+     * @param koniecIstniejaca Godzina zakończenia zajęć grupy już istniejącej w planie studenta
+     * @param startDocelowa    Godzina rozpoczęcia zajęć grupy docelowej
+     * @param koniecDocelowa   Godzina zakończenia zajęć grupy docelowej
+     * @param oczekiwanyKonflikt true jeśli powinien wystąpić konflikt czasowy, false w przeciwnym razie
      */
     @ParameterizedTest
     @CsvSource({
@@ -139,34 +136,39 @@ public class FasadaAktualizacji_Test {
             "10:00, 12:30, 11:00, 13:30, true",   // Konflikt
             "09:00, 11:00, 10:00, 12:00, true"    // Konflikt
     })
-    @DisplayName("Sprawdzanie konfliktów czasowych")
+    @DisplayName("Sprawdzanie konfliktów czasowych z istniejącymi grupami")
     void sprawdzanieKonfliktowCzasowych(
-            String start1, String koniec1,
-            String start2, String koniec2,
+            String startIstniejaca, String koniecIstniejaca,
+            String startDocelowa, String koniecDocelowa,
             boolean oczekiwanyKonflikt) {
 
-        // Given
-        grupaZrodlowa.setGodzRozpoczecia(LocalTime.parse(start1));
-        grupaZrodlowa.setGodzZakonczenia(LocalTime.parse(koniec1));
-        grupaDocelowa.setGodzRozpoczecia(LocalTime.parse(start2));
-        grupaDocelowa.setGodzZakonczenia(LocalTime.parse(koniec2));
+        Grupa grupaIstniejaca = new Grupa(
+                LocalTime.parse(startIstniejaca),
+                LocalTime.parse(koniecIstniejaca),
+                1,
+                grupaDocelowa.getProwadzacy(),
+                20
+        );
+        grupaIstniejaca.setIdGrupy(3);
+        grupaIstniejaca.setRodzajGrupy(RodzajGrupy.CWICZENIA);
+        grupaIstniejaca.setPrzedmiot(przedmiot);
 
-        grupaZrodlowa.dodajStudenta(student);
-        student.getGrupy().add(grupaZrodlowa);
+        grupaIstniejaca.dodajStudenta(student);
+        student.getGrupy().add(grupaIstniejaca);
 
-        // When & Then
+        grupaDocelowa.setGodzRozpoczecia(LocalTime.parse(startDocelowa));
+        grupaDocelowa.setGodzZakonczenia(LocalTime.parse(koniecDocelowa));
+
         if (oczekiwanyKonflikt) {
             assertThrows(IllegalStateException.class, () ->
-                    fasada.przeniesStudenta(
-                            grupaZrodlowa.getIdGrupy(),
+                    fasada.zapiszStudentaDoGrupy(
                             grupaDocelowa.getIdGrupy(),
                             student.getNrAlbumu()
                     )
             );
         } else {
             assertDoesNotThrow(() ->
-                    fasada.przeniesStudenta(
-                            grupaZrodlowa.getIdGrupy(),
+                    fasada.zapiszStudentaDoGrupy(
                             grupaDocelowa.getIdGrupy(),
                             student.getNrAlbumu()
                     )
@@ -181,10 +183,9 @@ public class FasadaAktualizacji_Test {
     @Test
     @DisplayName("Zapis studenta do grupy - grupa pełna")
     void zapiszStudentaDoGrupyPelna() {
-        // Given
+
         grupaDocelowa.setZajeteMiejsca(grupaDocelowa.getLimitMiejsc());
 
-        // When & Then
         assertFalse(fasada.zapiszStudentaDoGrupy(
                 grupaDocelowa.getIdGrupy(),
                 student.getNrAlbumu()

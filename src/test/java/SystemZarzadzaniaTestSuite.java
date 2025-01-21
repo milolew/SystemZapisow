@@ -9,7 +9,7 @@ import org.junit.jupiter.api.BeforeAll;
  * Główny zestaw testów aplikacji
  */
 @Suite
-@SuiteDisplayName("System Zarządzania Zapisami - Testy Integracyjne")
+@SuiteDisplayName("System Zarządzania Zapisami - Testy")
 @SelectClasses({
         FasadaAktualizacji_TestMockit.class,
         FasadaAktualizacji_Test.class,
@@ -24,9 +24,7 @@ public class SystemZarzadzaniaTestSuite {
     public static void setUpTestSuite() {
         System.out.println("==========================================");
         System.out.println("Rozpoczęcie wykonywania zestawu testów");
-        System.out.println("Inicjalizacja wspólnych zasobów...");
         System.out.println("Testowane pakiety: model, view");
-        System.out.println("Włączone tagi: model, view, facade");
         System.out.println("==========================================");
     }
 }
