@@ -1,0 +1,262 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20241207</FitNesseVersion>
+  <rootPath>AplikacjaTest.PrzeniesStudentowTest</rootPath>
+  <result>
+    <counts>
+      <right>9</right>
+      <wrong>1</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <date>2025-01-27T09:35:39+01:00</date>
+    <runTimeInMillis>11</runTimeInMillis>
+    <content>&lt;br/&gt;&lt;span class="meta"&gt;variable defined: TEST_SYSTEM=fit&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: ../../../target/classes&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: ../../../target/test-classes&lt;/span&gt;&lt;br/&gt;&lt;br/&gt;&lt;h1 id="0"&gt;Testy przenoszenia studentów między grupami&lt;/h1&gt;
+Test sprawdza różne scenariusze przenoszenia studentów między grupami zajęciowymi.&lt;br/&gt;&lt;br/&gt;&lt;h2 id="1"&gt;Udane przeniesienie studentów&lt;/h2&gt;
+Sprawdzenie czy studenci mogą zostać przeniesieni do grupy z wystarczającą liczbą miejsc&lt;br/&gt;(Grupa 2 - ćwiczenia z IO ma 10 studentów, Grupa 3 - laboratorium ma 5 studentów, jest miejsce na przeniesienie).&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="3"&gt;fitnesse.fixtures.PrzeniesStudentowFixture&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;idGrupyZrodlowej&lt;/td&gt;
+		&lt;td&gt;idGrupyDocelowej&lt;/td&gt;
+		&lt;td&gt;przenies?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;3&lt;/td&gt;
+		&lt;td class="pass"&gt;true&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h2 id="2"&gt;Próba przeniesienia do pełnej grupy&lt;/h2&gt;
+Sprawdzenie czy system prawidłowo odrzuca próbę przeniesienia do grupy bez wystarczającej liczby miejsc&lt;br/&gt;(Grupa 4 ma 5 studentów, Grupa 1 - wykład jest już pełna).&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="3"&gt;fitnesse.fixtures.PrzeniesStudentowFixture&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;idGrupyZrodlowej&lt;/td&gt;
+		&lt;td&gt;idGrupyDocelowej&lt;/td&gt;
+		&lt;td&gt;przenies?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;4&lt;/td&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td class="pass"&gt;false&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h2 id="3"&gt;Próba przeniesienia z pustej grupy&lt;/h2&gt;
+Sprawdzenie czy system prawidłowo obsługuje próbę przeniesienia z grupy bez studentów&lt;br/&gt;(Grupa 9 - laboratorium jest pusta).&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="3"&gt;fitnesse.fixtures.PrzeniesStudentowFixture&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;idGrupyZrodlowej&lt;/td&gt;
+		&lt;td&gt;idGrupyDocelowej&lt;/td&gt;
+		&lt;td&gt;przenies?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;9&lt;/td&gt;
+		&lt;td&gt;7&lt;/td&gt;
+		&lt;td class="pass"&gt;false&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h2 id="4"&gt;Przeniesienie między różnymi typami zajęć&lt;/h2&gt;
+Sprawdzenie czy system prawidłowo obsługuje próbę przeniesienia studentów między grupami różnych typów&lt;br/&gt;(Grupa 1 - wykład, Grupa 4 - laboratorium).&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="3"&gt;fitnesse.fixtures.PrzeniesStudentowFixture&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;idGrupyZrodlowej&lt;/td&gt;
+		&lt;td&gt;idGrupyDocelowej&lt;/td&gt;
+		&lt;td&gt;przenies?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;4&lt;/td&gt;
+		&lt;td class="pass"&gt;false&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h2 id="5"&gt;Przeniesienie do grupy tego samego przedmiotu&lt;/h2&gt;
+Sprawdzenie czy system pozwala przenieść studentów między grupami tego samego przedmiotu&lt;br/&gt;(Grupa 7 i 8 - laboratoria z BD).&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="3"&gt;fitnesse.fixtures.PrzeniesStudentowFixture&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;idGrupyZrodlowej&lt;/td&gt;
+		&lt;td&gt;idGrupyDocelowej&lt;/td&gt;
+		&lt;td&gt;przenies?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;7&lt;/td&gt;
+		&lt;td&gt;8&lt;/td&gt;
+		&lt;td class="pass"&gt;true&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h2 id="6"&gt;Przeniesienie do grupy innego przedmiotu&lt;/h2&gt;
+Sprawdzenie czy system blokuje przeniesienie do grupy z innego przedmiotu&lt;br/&gt;(Grupa 2 - IO, Grupa 21 - PO).&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="3"&gt;fitnesse.fixtures.PrzeniesStudentowFixture&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;idGrupyZrodlowej&lt;/td&gt;
+		&lt;td&gt;idGrupyDocelowej&lt;/td&gt;
+		&lt;td&gt;przenies?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;21&lt;/td&gt;
+		&lt;td class="pass"&gt;false&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h2 id="7"&gt;Przeniesienie między kierunkami&lt;/h2&gt;
+Sprawdzenie czy system blokuje przeniesienie między grupami z różnych kierunków&lt;br/&gt;(Grupa 4 - INF, Grupa 15 - IS).&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="3"&gt;fitnesse.fixtures.PrzeniesStudentowFixture&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;idGrupyZrodlowej&lt;/td&gt;
+		&lt;td&gt;idGrupyDocelowej&lt;/td&gt;
+		&lt;td&gt;przenies?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;4&lt;/td&gt;
+		&lt;td&gt;15&lt;/td&gt;
+		&lt;td class="pass"&gt;false&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h2 id="8"&gt;Przeniesienie z grupy projektowej&lt;/h2&gt;
+Sprawdzenie czy system obsługuje przeniesienie z grupy projektowej&lt;br/&gt;(Grupa 18 i 19 - grupy projektowe SO).&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="3"&gt;fitnesse.fixtures.PrzeniesStudentowFixture&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;idGrupyZrodlowej&lt;/td&gt;
+		&lt;td&gt;idGrupyDocelowej&lt;/td&gt;
+		&lt;td&gt;przenies?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;18&lt;/td&gt;
+		&lt;td&gt;19&lt;/td&gt;
+		&lt;td class="pass"&gt;true&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h2 id="9"&gt;Przeniesienie do nieistniejącej grupy&lt;/h2&gt;
+Sprawdzenie czy system prawidłowo obsługuje próbę przeniesienia do nieistniejącej grupy.&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="3"&gt;fitnesse.fixtures.PrzeniesStudentowFixture&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;idGrupyZrodlowej&lt;/td&gt;
+		&lt;td&gt;idGrupyDocelowej&lt;/td&gt;
+		&lt;td&gt;przenies?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;99&lt;/td&gt;
+		&lt;td class="pass"&gt;false&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h2 id="10"&gt;Przeniesienie z małej grupy do dużej&lt;/h2&gt;
+Sprawdzenie czy system pozwala przenieść studentów z małej grupy do grupy o większej pojemności&lt;br/&gt;(Grupa 22 - laboratorium 15 osób do Grupa 21 - ćwiczenia 30 osób).&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="3"&gt;fitnesse.fixtures.PrzeniesStudentowFixture&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;idGrupyZrodlowej&lt;/td&gt;
+		&lt;td&gt;idGrupyDocelowej&lt;/td&gt;
+		&lt;td&gt;przenies?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;22&lt;/td&gt;
+		&lt;td&gt;21&lt;/td&gt;
+		&lt;td class="fail"&gt;true &lt;span class="fit_label"&gt;expected&lt;/span&gt;&lt;hr&gt;false &lt;span class="fit_label"&gt;actual&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>PrzeniesStudentowTest</relativePageName>
+  </result>
+  <executionLog>
+    <testSystem>fit:fit.FitServer</testSystem>
+    <command>java -cp ../../../target/classes:../../../target/test-classes:SystemZapisow/target/classes:SystemZapisow/target/test-classes:SystemZapisow/test/java:../target/classes:../target/test-classes:/home/milolew/PWR/IO/SystemZapisow/src/test/fitnesse/fitnesse-standalone.jar fit.FitServer milolew 35109 3863</command>
+    <exitCode>1</exitCode>
+    <stdOut>=== System zapisów na zajęcia ===
+Podaj login: 
+
+Menu pracownika:
+1. Usuń grupę zajęciową
+2. Wyświetl wszystkie grupy zajęciowe
+0. Wyloguj
+
+Wybierz opcję: 
+
+Dostępne grupy zajęciowe:
+
+Przedmiot: Inżynieria Oprogramowania
+ID: 1 | WYKLAD | Prowadzący: dr Jan Kowalski | Termin: Poniedziałek 08:00-09:30 | Miejsca: 2/120
+ID: 2 | CWICZENIA | Prowadzący: dr hab. Anna Nowak | Termin: Poniedziałek 10:00-11:30 | Miejsca: 1/30
+ID: 3 | CWICZENIA | Prowadzący: dr hab. Anna Nowak | Termin: Wtorek 12:00-13:30 | Miejsca: 1/30
+ID: 4 | LABORATORIUM | Prowadzący: prof. Piotr Wiśniewski | Termin: Wtorek 14:00-15:30 | Miejsca: 1/15
+ID: 5 | LABORATORIUM | Prowadzący: prof. Piotr Wiśniewski | Termin: Środa 08:00-09:30 | Miejsca: 1/15
+
+Przedmiot: Bazy Danych
+ID: 6 | WYKLAD | Prowadzący: dr inż. Maria Kowalczyk | Termin: Środa 10:00-11:30 | Miejsca: 2/100
+ID: 7 | LABORATORIUM | Prowadzący: dr inż. Maria Kowalczyk | Termin: Środa 12:00-13:30 | Miejsca: 1/15
+ID: 8 | LABORATORIUM | Prowadzący: dr inż. Maria Kowalczyk | Termin: Czwartek 14:00-15:30 | Miejsca: 1/15
+ID: 9 | LABORATORIUM | Prowadzący: dr inż. Maria Kowalczyk | Termin: Piątek 08:00-09:30 | Miejsca: 0/15
+
+Przedmiot: Programowanie Obiektowe
+ID: 20 | WYKLAD | Prowadzący: dr Jan Kowalski | Termin: Wtorek 10:00-11:30 | Miejsca: 0/120
+ID: 21 | CWICZENIA | Prowadzący: dr hab. Anna Nowak | Termin: Wtorek 12:00-13:30 | Miejsca: 0/30
+ID: 22 | LABORATORIUM | Prowadzący: prof. Piotr Wiśniewski | Termin: Środa 14:00-15:30 | Miejsca: 0/15
+
+Przedmiot: Inżynieria Oprogramowania
+ID: 10 | WYKLAD | Prowadzący: dr hab. inż. Tomasz Lewandowski | Termin: Środa 10:00-11:30 | Miejsca: 1/80
+ID: 11 | CWICZENIA | Prowadzący: dr Jan Kowalski | Termin: Czwartek 12:00-13:30 | Miejsca: 1/30
+ID: 12 | CWICZENIA | Prowadzący: dr Jan Kowalski | Termin: Czwartek 14:00-15:30 | Miejsca: 0/30
+ID: 13 | CWICZENIA | Prowadzący: dr Jan Kowalski | Termin: Piątek 08:00-09:30 | Miejsca: 0/30
+
+Przedmiot: Bazy Danych
+ID: 14 | WYKLAD | Prowadzący: dr hab. Anna Nowak | Termin: Czwartek 10:00-11:30 | Miejsca: 1/90
+ID: 15 | LABORATORIUM | Prowadzący: prof. Piotr Wiśniewski | Termin: Piątek 12:00-13:30 | Miejsca: 1/15
+ID: 16 | LABORATORIUM | Prowadzący: prof. Piotr Wiśniewski | Termin: Piątek 14:00-15:30 | Miejsca: 0/15
+
+Przedmiot: Systemy Operacyjne
+ID: 17 | WYKLAD | Prowadzący: dr hab. inż. Tomasz Lewandowski | Termin: Poniedziałek 08:00-09:30 | Miejsca: 2/100
+ID: 18 | PROJEKT | Prowadzący: dr hab. inż. Tomasz Lewandowski | Termin: Poniedziałek 10:00-11:30 | Miejsca: 1/20
+ID: 19 | PROJEKT | Prowadzący: dr hab. inż. Tomasz Lewandowski | Termin: Wtorek 12:00-13:30 | Miejsca: 1/20
+
+Podaj ID grupy do usunięcia (0 aby wrócić): 
+Raport przeniesienia:
+Student 123456 - przeniesiony pomyślnie
+
+Raport przeniesienia:
+Student 123456 - Występuje konflikt w planie zajęć
+
+Grupa źródłowa jest pusta!
+Raport przeniesienia:
+Student 123456 - Występuje konflikt w planie zajęć
+Student 234567 - przeniesiony pomyślnie
+
+Raport przeniesienia:
+Student 234567 - przeniesiony pomyślnie
+
+Grupa źródłowa jest pusta!
+Grupy muszą należeć do tego samego przedmiotu!
+Raport przeniesienia:
+Student 567890 - przeniesiony pomyślnie
+
+Jedna z grup nie istnieje!
+Grupa źródłowa jest pusta!
+</stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>1</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>373</totalRunTimeInMillis>
+</testResults>
+

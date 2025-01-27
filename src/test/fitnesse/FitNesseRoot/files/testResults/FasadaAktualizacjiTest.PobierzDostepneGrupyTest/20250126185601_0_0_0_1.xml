@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20241207</FitNesseVersion>
+  <rootPath>FasadaAktualizacjiTest.PobierzDostepneGrupyTest</rootPath>
+  <result>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>1</exceptions>
+    </counts>
+    <date>2025-01-26T18:56:02+01:00</date>
+    <runTimeInMillis>192</runTimeInMillis>
+    <content>&lt;br/&gt;&lt;span class="meta"&gt;variable defined: TEST_SYSTEM=fit&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: ../../../target/classes&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: ../../../target/test-classes&lt;/span&gt;&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="8" class="error"&gt;fitnesse.fixtures.PobierzDostepneGrupyFixture&lt;hr&gt;&lt;pre&gt;&lt;div class="fit_stacktrace"&gt;java.lang.ExceptionInInitializerError
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:462)
+	at java.base/java.lang.Class.forName(Class.java:453)
+	at fit.FixtureLoader.loadFixtureClass(FixtureLoader.java:66)
+	at fit.FixtureLoader.instantiateFixture(FixtureLoader.java:59)
+	at fit.FixtureLoader.instantiateFirstValidFixtureClass(FixtureLoader.java:82)
+	at fit.FixtureLoader.disgraceThenLoad(FixtureLoader.java:43)
+	at fit.Fixture.loadFixture(Fixture.java:142)
+	at fit.Fixture.getLinkedFixtureWithArgs(Fixture.java:134)
+	at fit.Fixture.doTables(Fixture.java:79)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+Caused by: java.lang.IllegalArgumentException: Rodzaj grupy nie może być null
+	at model.Przedmiot.dodajGrupe(Przedmiot.java:93)
+	at fitnesse.fixtures.PobierzDostepneGrupyFixture.&lt;clinit&gt;(PobierzDostepneGrupyFixture.java:72)
+	... 13 more
+&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;idGrupyZrodlowej&lt;/td&gt;
+		&lt;td&gt;ustawZajeteMiejscaGrupaDocelowa&lt;/td&gt;
+		&lt;td&gt;ustawZajeteMiejsca&lt;/td&gt;
+		&lt;td&gt;ustawKonfliktCzasowy&lt;/td&gt;
+		&lt;td&gt;resetujStan&lt;/td&gt;
+		&lt;td&gt;liczbaGrupDostepnychDoPrzeniesienia?&lt;/td&gt;
+		&lt;td&gt;czyGrupaJestDostepna2?&lt;/td&gt;
+		&lt;td&gt;komunikatBledu?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;0&lt;/td&gt;
+		&lt;td&gt;false&lt;/td&gt;
+		&lt;td&gt;false&lt;/td&gt;
+		&lt;td&gt;true&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;true&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;999&lt;/td&gt;
+		&lt;td&gt;0&lt;/td&gt;
+		&lt;td&gt;false&lt;/td&gt;
+		&lt;td&gt;false&lt;/td&gt;
+		&lt;td&gt;true&lt;/td&gt;
+		&lt;td&gt;-1&lt;/td&gt;
+		&lt;td&gt;false&lt;/td&gt;
+		&lt;td&gt;Grupa o podanym ID nie istnieje&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;20&lt;/td&gt;
+		&lt;td&gt;true&lt;/td&gt;
+		&lt;td&gt;false&lt;/td&gt;
+		&lt;td&gt;true&lt;/td&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;false&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;0&lt;/td&gt;
+		&lt;td&gt;false&lt;/td&gt;
+		&lt;td&gt;true&lt;/td&gt;
+		&lt;td&gt;true&lt;/td&gt;
+		&lt;td&gt;0&lt;/td&gt;
+		&lt;td&gt;false&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;0&lt;/td&gt;
+		&lt;td&gt;false&lt;/td&gt;
+		&lt;td&gt;false&lt;/td&gt;
+		&lt;td&gt;true&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;true&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>PobierzDostepneGrupyTest</relativePageName>
+  </result>
+  <executionLog>
+    <testSystem>fit:fit.FitServer</testSystem>
+    <command>java -cp ../../../target/classes:../../../target/test-classes:SystemZapisow/target/classes:SystemZapisow/target/test-classes:SystemZapisow/test/java:../target/classes:../target/test-classes:/home/milolew/PWR/IO/SystemZapisow/src/test/fitnesse/fitnesse-standalone.jar fit.FitServer milolew 34631 3863</command>
+    <exitCode>1</exitCode>
+    <stdOut>DEBUG: Inicjalizacja - przedmiot utworzony: Testowy Przedmiot
+DEBUG: ID grupy źródłowej po ustawieniu: 1
+</stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>1</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>541</totalRunTimeInMillis>
+</testResults>
+

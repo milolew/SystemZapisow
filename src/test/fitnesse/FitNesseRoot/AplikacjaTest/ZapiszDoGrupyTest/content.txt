@@ -1,0 +1,29 @@
+!define TEST_SYSTEM {fit}
+
+!path ../../../target/classes
+!path ../../../target/test-classes
+
+!1 Testy zapisywania do grup
+Test sprawdza różne scenariusze zapisywania studenta do grupy zajęciowej, wykorzystując grupy zdefiniowane w systemie.
+
+!2 Udany zapis do grupy
+Sprawdzenie czy student może zapisać się do grupy, która ma wolne miejsca.
+!|fitnesse.fixtures.ZapiszDoGrupyFixture|
+|login|idGrupy|zapisz?|
+|student123456|22|true|
+|student234567|9|true|
+|student2137|13|true|
+
+!2 Próba zapisu do pełnej grupy
+Sprawdzenie czy system prawidłowo odrzuca próbę zapisu do grupy bez wolnych miejsc.
+!|fitnesse.fixtures.ZapiszDoGrupyFixture|
+|login|idGrupy|zapisz?|
+|student123456|1|false|
+|student234567|6|false|
+
+!2 Próba ponownego zapisu do tej samej grupy
+Sprawdzenie czy system prawidłowo odrzuca próbę ponownego zapisu do tej samej grupy.
+!|fitnesse.fixtures.ZapiszDoGrupyFixture|
+|login|idGrupy|zapisz?|
+|student123456|4|false|
+|student234567|7|false|

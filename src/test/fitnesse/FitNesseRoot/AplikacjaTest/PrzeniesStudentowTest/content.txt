@@ -1,0 +1,48 @@
+!define TEST_SYSTEM {fit}
+
+!path ../../../target/classes
+!path ../../../target/test-classes
+
+!1 Testy przenoszenia studentów między grupami
+Test sprawdza różne scenariusze przenoszenia studentów między grupami zajęciowymi.
+
+!2 Udane przeniesienie studentów
+Sprawdzenie czy studenci mogą zostać przeniesieni do grupy z wystarczającą liczbą miejsc
+(Grupa 2 - ćwiczenia z IO posiadają studentów, Grupa 3 - laboratorium jest tego samego typu i ma wolne miejsca).
+!|fitnesse.fixtures.PrzeniesStudentowFixture|
+|idGrupyZrodlowej|idGrupyDocelowej|przenies?|
+|2|3|true|
+
+!2 Próba przeniesienia z pustej grupy
+Sprawdzenie czy system prawidłowo obsługuje próbę przeniesienia z grupy bez studentów
+(Grupa 9 - laboratorium jest pusta).
+!|fitnesse.fixtures.PrzeniesStudentowFixture|
+|idGrupyZrodlowej|idGrupyDocelowej|przenies?|
+|9|7|false|
+
+!2 Przeniesienie między różnymi typami zajęć
+Sprawdzenie czy system prawidłowo obsługuje próbę przeniesienia studentów między grupami różnych typów
+(Grupa 1 - wykład, Grupa 4 - laboratorium).
+!|fitnesse.fixtures.PrzeniesStudentowFixture|
+|idGrupyZrodlowej|idGrupyDocelowej|przenies?|
+|1|4|false|
+
+!2 Przeniesienie do grupy innego przedmiotu
+Sprawdzenie czy system blokuje przeniesienie do grupy z innego przedmiotu
+(Grupa 2 - IO, Grupa 21 - PO).
+!|fitnesse.fixtures.PrzeniesStudentowFixture|
+|idGrupyZrodlowej|idGrupyDocelowej|przenies?|
+|2|21|false|
+
+!2 Przeniesienie między kierunkami
+Sprawdzenie czy system blokuje przeniesienie między grupami z różnych kierunków
+(Grupa 4 - INF, Grupa 15 - IS).
+!|fitnesse.fixtures.PrzeniesStudentowFixture|
+|idGrupyZrodlowej|idGrupyDocelowej|przenies?|
+|4|15|false|
+
+!2 Przeniesienie do nieistniejącej grupy
+Sprawdzenie czy system prawidłowo obsługuje próbę przeniesienia do nieistniejącej grupy.
+!|fitnesse.fixtures.PrzeniesStudentowFixture|
+|idGrupyZrodlowej|idGrupyDocelowej|przenies?|
+|2|99|false|

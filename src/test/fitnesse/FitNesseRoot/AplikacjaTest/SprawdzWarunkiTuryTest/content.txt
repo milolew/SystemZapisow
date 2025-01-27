@@ -1,0 +1,34 @@
+!define TEST_SYSTEM {fit}
+!path ../../../target/classes
+!path ../../../target/test-classes
+
+!1 Testy sprawdzania warunków tury zapisów
+Test sprawdza różne scenariusze weryfikacji średniej studenta oraz aktywności tury dla zapisów na zajęcia.
+
+!2 Sprawdzanie średniej
+Sprawdzenie czy system prawidłowo weryfikuje średnią studenta względem wymaganej średniej.
+
+!|fitnesse.fixtures.SprawdzWarunkiTuryFixture|
+|login|srednia|wymaganaSrednia|kierunekNazwa|sprawdzWarunki?|
+|student123456|4.5|4.0|Informatyka|true|
+|student234567|4.8|5.0|Informatyka|false|
+|student2137|5.0|5.0|Informatyka|true|
+|student345678|3.0|4.0|Informatyka|false|
+|student456789|4.1|4.0|Informatyka|true|
+
+!2 Sprawdzanie granicznych wartości średniej
+
+!|fitnesse.fixtures.SprawdzWarunkiTuryFixture|
+|login|srednia|wymaganaSrednia|kierunekNazwa|sprawdzWarunki?|
+|student123456|4.0|4.0|Informatyka|true|
+|student234567|3.99|4.0|Informatyka|false|
+|student345678|5.0|5.0|Informatyka|true|
+|student456789|4.99|5.0|Informatyka|false|
+
+!2 Sprawdzanie nieaktywnej tury
+Sprawdzenie czy system prawidłowo weryfikuje próbę zapisu poza terminem tury.
+
+!|fitnesse.fixtures.SprawdzWarunkiTuryFixture|
+|login|srednia|wymaganaSrednia|kierunekNazwa|uzyjDateZParametrow|dataRozpoczecia|dataZakonczenia|sprawdzWarunki?|
+|student123456|5.0|4.0|Informatyka|true|2024-01-01 00:00|2024-01-02 00:00|false|
+|student123456|5.0|4.0|Informatyka|true|2026-01-01 00:00|2026-01-02 00:00|false|

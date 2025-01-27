@@ -9,13 +9,6 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
-/*
-* 2. Fasada Widok
-* 3. Przedmiot (trzeba dodać throw)
-* 4. FasadaAktualizacji
-* */
-
-
 public class PrezenterSterowanie implements InterakcjaZUzytkownikiem {
     private final Weryfikacja weryfikacja;
     private final AktualizacjaDanych aktualizacjaDanych;
@@ -48,6 +41,11 @@ public class PrezenterSterowanie implements InterakcjaZUzytkownikiem {
         if (weryfikacja.zaloguj(login, haslo)) {
             zalogowanyUzytkownik = login;
             String rola = weryfikacja.getRola(login);
+
+            if(rola == null) {
+                wyswietlanieDanych.wyswietlKomunikat("Błędny login lub hasło!");
+                uruchomSystem();
+            }
 
             try {
                 aktualnyWidok = fabrykaPrezenterow.utworzWidok(rola);
@@ -83,13 +81,20 @@ public class PrezenterSterowanie implements InterakcjaZUzytkownikiem {
         }
     }
 
-    // Metody pomocnicze dla stanów
     public void ustawStan(StanPrezentera stan) {
         this.aktualnyStan = stan;
     }
 
+    public StanPrezentera getStan() {
+        return aktualnyStan;
+    }
+
     public WidokUzytkownika getAktualnyWidok() {
         return aktualnyWidok;
+    }
+
+    public WyswietlanieDanych getWyswietlanieDanych() {
+        return wyswietlanieDanych;
     }
 
     public void wyswietlKomunikat(String komunikat) {
@@ -189,7 +194,47 @@ public class PrezenterSterowanie implements InterakcjaZUzytkownikiem {
 
     public boolean przeniesStudentow(int idGrupyZrodlowej, int idGrupyDocelowej) {
         Grupa grupaZrodlowa = pobranieDanych.pobierzGrupe(idGrupyZrodlowej);
-        if (grupaZrodlowa == null) {
+        Grupa grupaDocelowa = pobranieDanych.pobierzGrupe(idGrupyDocelowej);
+
+        // Sprawdzenie czy grupy istnieją
+        if (grupaZrodlowa == null || grupaDocelowa == null) {
+            wyswietlKomunikat("Jedna z grup nie istnieje!");
+            return false;
+        }
+
+        // Sprawdzenie czy grupa źródłowa ma studentów
+        if (grupaZrodlowa.getCzlonkowie().isEmpty()) {
+            wyswietlKomunikat("Grupa źródłowa jest pusta!");
+            return false;
+        }
+
+        // Znajdź przedmioty do których należą grupy
+        Przedmiot przedmiotZrodlowy = znajdzPrzedmiotDlaGrupy(grupaZrodlowa);
+        Przedmiot przedmiotDocelowy = znajdzPrzedmiotDlaGrupy(grupaDocelowa);
+
+        if (przedmiotZrodlowy == null || przedmiotDocelowy == null) {
+            wyswietlKomunikat("Nie można znaleźć przedmiotów dla grup!");
+            return false;
+        }
+
+        // Sprawdź czy to ten sam przedmiot
+        if (!przedmiotZrodlowy.equals(przedmiotDocelowy)) {
+            wyswietlKomunikat("Grupy muszą należeć do tego samego przedmiotu!");
+            return false;
+        }
+
+        // Sprawdź czy to ten sam kierunek
+        Kierunek kierunekZrodlowy = znajdzKierunekDlaPrzedmiotu(przedmiotZrodlowy);
+        Kierunek kierunekDocelowy = znajdzKierunekDlaPrzedmiotu(przedmiotDocelowy);
+
+        if (kierunekZrodlowy == null || kierunekDocelowy == null || !kierunekZrodlowy.equals(kierunekDocelowy)) {
+            wyswietlKomunikat("Grupy muszą należeć do tego samego kierunku!");
+            return false;
+        }
+
+        // Sprawdzenie czy w grupie docelowej jest wystarczająco miejsca
+        if (!czyJestMiejsceWGrupie(grupaDocelowa, grupaZrodlowa.getCzlonkowie().size())) {
+            wyswietlKomunikat("Brak wystarczającej liczby miejsc w grupie docelowej!");
             return false;
         }
 
@@ -211,7 +256,7 @@ public class PrezenterSterowanie implements InterakcjaZUzytkownikiem {
                 } else {
                     wszystkoPrzeniesione = false;
                     raport.append("Student ").append(student.getNrAlbumu())
-                            .append(" - nie udało się przenieść (brak miejsc)\n");
+                            .append(" - nie udało się przenieść\n");
                 }
             } catch (IllegalStateException e) {
                 wszystkoPrzeniesione = false;
@@ -222,6 +267,33 @@ public class PrezenterSterowanie implements InterakcjaZUzytkownikiem {
 
         ((WidokPracownika) aktualnyWidok).wyswietlRaportPrzeniesienia(raport.toString());
         return wszystkoPrzeniesione;
+    }
+
+    private Przedmiot znajdzPrzedmiotDlaGrupy(Grupa grupa) {
+        // Przejdź przez wszystkie kierunki
+        for (Kierunek kierunek : pobranieDanych.pobierzKierunki()) {
+            // Dla każdego przedmiotu na kierunku
+            for (Przedmiot przedmiot : kierunek.getPrzedmioty()) {
+                // Sprawdź czy grupa należy do tego przedmiotu
+                if (przedmiot.getGrupy().contains(grupa)) {
+                    return przedmiot;
+                }
+            }
+        }
+        return null;
+    }
+
+    private Kierunek znajdzKierunekDlaPrzedmiotu(Przedmiot przedmiot) {
+        for (Kierunek kierunek : pobranieDanych.pobierzKierunki()) {
+            if (kierunek.getPrzedmioty().contains(przedmiot)) {
+                return kierunek;
+            }
+        }
+        return null;
+    }
+
+    private boolean czyJestMiejsceWGrupie(Grupa grupa, int liczbaPrzenoszonych) {
+        return (grupa.getLimitMiejsc() - grupa.getCzlonkowie().size()) >= liczbaPrzenoszonych;
     }
 
     public void wyloguj() {

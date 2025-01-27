@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20241207</FitNesseVersion>
+  <rootPath>FasadaAktualizacjiTest.UsunGrupeTest</rootPath>
+  <result>
+    <counts>
+      <right>2</right>
+      <wrong>1</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <date>2025-01-26T13:36:26+01:00</date>
+    <runTimeInMillis>154</runTimeInMillis>
+    <content>&lt;br/&gt;&lt;span class="meta"&gt;variable defined: TEST_SYSTEM=fit&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: ../../../target/classes&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: ../../../target/test-classes&lt;/span&gt;&lt;br/&gt;&lt;br/&gt;&lt;h1 id="0"&gt;Test usuwania grupy&lt;/h1&gt;
+&lt;h3 id="1"&gt;Testy sprawdzające funkcjonalność usuwania grupy z systemu.&lt;/h3&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="4"&gt;fitnesse.fixtures.UsunGrupeFixture&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;idGrupy&lt;/td&gt;
+		&lt;td&gt;zajeteMiejsca&lt;/td&gt;
+		&lt;td&gt;usun?&lt;/td&gt;
+		&lt;td&gt;komunikatBledu?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;0&lt;/td&gt;
+		&lt;td class="fail"&gt;true &lt;span class="fit_label"&gt;expected&lt;/span&gt;&lt;hr&gt;false &lt;span class="fit_label"&gt;actual&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt; &lt;span class="fit_grey"&gt;Grupa o podanym ID nie istnieje&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;5&lt;/td&gt;
+		&lt;td class="pass"&gt;false&lt;/td&gt;
+		&lt;td&gt; &lt;span class="fit_grey"&gt;Nie można usunąć grupy z zajętymi miejscami&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;999&lt;/td&gt;
+		&lt;td&gt;0&lt;/td&gt;
+		&lt;td class="pass"&gt;false&lt;/td&gt;
+		&lt;td&gt; &lt;span class="fit_grey"&gt;Grupa o podanym ID nie istnieje&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>UsunGrupeTest</relativePageName>
+  </result>
+  <executionLog>
+    <testSystem>fit:fit.FitServer</testSystem>
+    <command>java -cp ../../../target/classes:../../../target/test-classes:SystemZapisow/target/classes:SystemZapisow/target/test-classes:SystemZapisow/test/java:../target/classes:../target/test-classes:/home/milolew/PWR/IO/SystemZapisow/src/test/fitnesse/fitnesse-standalone.jar fit.FitServer milolew 34355 3863</command>
+    <exitCode>1</exitCode>
+    <stdOut>DEBUG: Rozpoczęcie inicjalizacji UsunGrupeFixture
+DEBUG: Struktura przed utworzeniem PobranieDanych:
+DEBUG: Grupa ID: 1
+DEBUG: Przedmiot ID: 1
+DEBUG: Liczba grup w przedmiocie: 0
+DEBUG: Wywołano pobierzKierunki()
+DEBUG: Wywołano pobierzKierunki()
+DEBUG: Wywołano pobierzKierunki()
+DEBUG: Stan po inicjalizacji fasady:
+DEBUG: Grupa dostępna w pobranieDanych: true
+DEBUG: Liczba grup w przedmiocie: 0
+DEBUG: Rozpoczęcie metody usun() dla grupy 1
+DEBUG: Złapano wyjątek: Grupa o podanym ID nie istnieje
+DEBUG: Rozpoczęcie metody usun() dla grupy 1
+DEBUG: Nie można usunąć grupy z zajętymi miejscami
+DEBUG: Rozpoczęcie metody usun() dla grupy 999
+DEBUG: Grupa o podanym ID nie istnieje
+</stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>1</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>488</totalRunTimeInMillis>
+</testResults>
+

@@ -4,7 +4,7 @@ import java.time.LocalTime;
 import java.util.*;
 
 public class FasadaAktualizacji implements AktualizacjaDanych {
-    private final Map<Integer, Grupa> grupy;
+    public final Map<Integer, Grupa> grupy;
     private final PobranieDanych pobranieDanych;
     private final KierunekDAO kierunekDAO;
     private final PrzedmiotDAO przedmiotDAO;
@@ -27,17 +27,17 @@ public class FasadaAktualizacji implements AktualizacjaDanych {
         inicjalizujGrupy();
     }
 
-    private void inicjalizujGrupy() {
+    protected void inicjalizujGrupy() {
         for (Kierunek kierunek : pobranieDanych.pobierzKierunki()) {
             for (Przedmiot przedmiot : kierunek.getPrzedmioty()) {
-                for (Grupa grupa : przedmiotDAO.pobierzGrupy(przedmiot)) {
+                for (Grupa grupa : przedmiot.getGrupy()) {
                     grupy.put(grupa.getIdGrupy(), grupa);
                 }
             }
         }
     }
 
-    private boolean czyWystepujeKonflikt(Student student, Grupa nowaGrupa) {
+    protected boolean czyWystepujeKonflikt(Student student, Grupa nowaGrupa) {
         for (Grupa grupa : student.getGrupy()) {
             if (grupa.getDzienTyg() == nowaGrupa.getDzienTyg()) {
                 LocalTime start1 = grupa.getGodzRozpoczecia();
@@ -76,7 +76,7 @@ public class FasadaAktualizacji implements AktualizacjaDanych {
 
         // Sprawdzenie dostępności miejsc
         if (grupaDocelowa.getZajeteMiejsca() >= grupaDocelowa.getLimitMiejsc()) {
-            return false;
+            throw new IllegalStateException("Grupa docelowa jest pełna");
         }
 
         // Sprawdzenie konfliktów

@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20241207</FitNesseVersion>
+  <rootPath>FasadaAktualizacjiTest.ZapiszStudentaDoGrupyTest</rootPath>
+  <result>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>42</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <date>2025-01-26T14:37:28+01:00</date>
+    <runTimeInMillis>4</runTimeInMillis>
+    <content>&lt;br/&gt;&lt;span class="meta"&gt;variable defined: TEST_SYSTEM=fit&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: ../../../target/classes&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: ../../../target/test-classes&lt;/span&gt;&lt;br/&gt;&lt;br/&gt;&lt;div class="contents"&gt;
+	&lt;b&gt;Contents:&lt;/b&gt;
+	&lt;ul class="toc1"/&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;h1 id="0"&gt;Test zapisywania studenta do grupy&lt;/h1&gt;
+Testy sprawdzające funkcjonalność zapisywania studenta do grupy.&lt;br/&gt;&lt;br/&gt;&lt;h2 id="1"&gt;Scenariusz 1: Poprawny zapis studenta do grupy&lt;/h2&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="5"&gt;fitnesse.fixtures.ZapiszStudentaDoGrupyFixture&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="ignore"&gt;id grupy&lt;/td&gt;
+		&lt;td class="ignore"&gt;nr indeksu&lt;/td&gt;
+		&lt;td class="ignore"&gt;zajete miejsca&lt;/td&gt;
+		&lt;td class="ignore"&gt;limit miejsc&lt;/td&gt;
+		&lt;td class="ignore"&gt;zapisz?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="ignore"&gt;1&lt;/td&gt;
+		&lt;td class="ignore"&gt;12345&lt;/td&gt;
+		&lt;td class="ignore"&gt;5&lt;/td&gt;
+		&lt;td class="ignore"&gt;20&lt;/td&gt;
+		&lt;td class="ignore"&gt;true&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h2 id="2"&gt;Scenariusz 2: Próba zapisu do pełnej grupy&lt;/h2&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="6"&gt;fitnesse.fixtures.ZapiszStudentaDoGrupyFixture&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="ignore"&gt;id grupy&lt;/td&gt;
+		&lt;td class="ignore"&gt;nr indeksu&lt;/td&gt;
+		&lt;td class="ignore"&gt;zajete miejsca&lt;/td&gt;
+		&lt;td class="ignore"&gt;limit miejsc&lt;/td&gt;
+		&lt;td class="ignore"&gt;zapisz?&lt;/td&gt;
+		&lt;td class="ignore"&gt;komunikat bledu?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="ignore"&gt;1&lt;/td&gt;
+		&lt;td class="ignore"&gt;12345&lt;/td&gt;
+		&lt;td class="ignore"&gt;20&lt;/td&gt;
+		&lt;td class="ignore"&gt;20&lt;/td&gt;
+		&lt;td class="ignore"&gt;false&lt;/td&gt;
+		&lt;td class="ignore"&gt;Grupa osiągnęła limit miejsc&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h2 id="3"&gt;Scenariusz 3: Próba zapisu do nieistniejącej grupy&lt;/h2&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="4"&gt;fitnesse.fixtures.ZapiszStudentaDoGrupyFixture&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="ignore"&gt;id grupy&lt;/td&gt;
+		&lt;td class="ignore"&gt;nr indeksu&lt;/td&gt;
+		&lt;td class="ignore"&gt;zapisz?&lt;/td&gt;
+		&lt;td class="ignore"&gt;komunikat bledu?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="ignore"&gt;999&lt;/td&gt;
+		&lt;td class="ignore"&gt;12345&lt;/td&gt;
+		&lt;td class="ignore"&gt;false&lt;/td&gt;
+		&lt;td class="ignore"&gt;Grupa o podanym ID nie istnieje&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h2 id="4"&gt;Scenariusz 4: Test konfliktów czasowych&lt;/h2&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="6"&gt;fitnesse.fixtures.ZapiszStudentaDoGrupyFixture&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="ignore"&gt;id grupy&lt;/td&gt;
+		&lt;td class="ignore"&gt;nr indeksu&lt;/td&gt;
+		&lt;td class="ignore"&gt;godzina rozpoczecia&lt;/td&gt;
+		&lt;td class="ignore"&gt;godzina zakonczenia&lt;/td&gt;
+		&lt;td class="ignore"&gt;zapisz?&lt;/td&gt;
+		&lt;td class="ignore"&gt;komunikat bledu?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="ignore"&gt;1&lt;/td&gt;
+		&lt;td class="ignore"&gt;12345&lt;/td&gt;
+		&lt;td class="ignore"&gt;10:00&lt;/td&gt;
+		&lt;td class="ignore"&gt;11:30&lt;/td&gt;
+		&lt;td class="ignore"&gt;false&lt;/td&gt;
+		&lt;td class="ignore"&gt;Występuje konflikt w planie zajęć&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>ZapiszStudentaDoGrupyTest</relativePageName>
+  </result>
+  <executionLog>
+    <testSystem>fit:fit.FitServer</testSystem>
+    <command>java -cp ../../../target/classes:../../../target/test-classes:SystemZapisow/target/classes:SystemZapisow/target/test-classes:SystemZapisow/test/java:../target/classes:../target/test-classes:/home/milolew/PWR/IO/SystemZapisow/src/test/fitnesse/fitnesse-standalone.jar fit.FitServer milolew 41491 3863</command>
+    <exitCode>0</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>1</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>315</totalRunTimeInMillis>
+</testResults>
+

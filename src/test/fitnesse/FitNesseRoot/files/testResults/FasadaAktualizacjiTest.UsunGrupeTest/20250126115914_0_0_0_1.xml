@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20241207</FitNesseVersion>
+  <rootPath>FasadaAktualizacjiTest.UsunGrupeTest</rootPath>
+  <result>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>3</exceptions>
+    </counts>
+    <date>2025-01-26T11:59:14+01:00</date>
+    <runTimeInMillis>204</runTimeInMillis>
+    <content>&lt;br/&gt;&lt;span class="meta"&gt;classpath: ../target/classes&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: ../target/test-classes&lt;/span&gt;&lt;br/&gt;&lt;br/&gt;&lt;div class="contents"&gt;
+	&lt;b&gt;Contents:&lt;/b&gt;
+	&lt;ul class="toc1"/&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;h1 id="0"&gt;Test usuwania grupy&lt;/h1&gt;
+Testy sprawdzające funkcjonalność usuwania grupy z systemu.&lt;br/&gt;&lt;br/&gt;&lt;h2 id="1"&gt;Scenariusz 1: Usunięcie pustej grupy&lt;/h2&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="3" class="error"&gt;fitnesse.fixtures.UsunGrupeFixture&lt;hr/&gt; &lt;span class="fit_label"&gt;Could not find fixture: fitnesse.fixtures.UsunGrupeFixture.&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;id grupy&lt;/td&gt;
+		&lt;td&gt;zajete miejsca&lt;/td&gt;
+		&lt;td&gt;usun?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;0&lt;/td&gt;
+		&lt;td&gt;true&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h2 id="2"&gt;Scenariusz 2: Próba usunięcia grupy z zapisanymi studentami&lt;/h2&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="3" class="error"&gt;fitnesse.fixtures.UsunGrupeFixture&lt;hr/&gt; &lt;span class="fit_label"&gt;Could not find fixture: fitnesse.fixtures.UsunGrupeFixture.&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;id grupy&lt;/td&gt;
+		&lt;td&gt;zajete miejsca&lt;/td&gt;
+		&lt;td&gt;usun?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;5&lt;/td&gt;
+		&lt;td&gt;false&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h2 id="3"&gt;Scenariusz 3: Próba usunięcia nieistniejącej grupy&lt;/h2&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="4" class="error"&gt;fitnesse.fixtures.UsunGrupeFixture&lt;hr/&gt; &lt;span class="fit_label"&gt;Could not find fixture: fitnesse.fixtures.UsunGrupeFixture.&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;id grupy&lt;/td&gt;
+		&lt;td&gt;zajete miejsca&lt;/td&gt;
+		&lt;td&gt;usun?&lt;/td&gt;
+		&lt;td&gt;komunikat bledu?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;999&lt;/td&gt;
+		&lt;td&gt;0&lt;/td&gt;
+		&lt;td&gt;false&lt;/td&gt;
+		&lt;td&gt;Grupa o podanym ID nie istnieje&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>UsunGrupeTest</relativePageName>
+  </result>
+  <executionLog>
+    <testSystem>fit:fit.FitServer</testSystem>
+    <command>java -cp ../target/classes:../target/test-classes:/home/milolew/PWR/IO/SystemZapisow/src/test/fitnesse/fitnesse-standalone.jar fit.FitServer milolew 37269 3863</command>
+    <exitCode>3</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>1</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>558</totalRunTimeInMillis>
+</testResults>
+

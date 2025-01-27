@@ -1,0 +1,627 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20241207</FitNesseVersion>
+  <rootPath>FasadaAktualizacjiTest.ZapiszStudentaDoGrupyTest</rootPath>
+  <result>
+    <counts>
+      <right>3</right>
+      <wrong>1</wrong>
+      <ignores>0</ignores>
+      <exceptions>4</exceptions>
+    </counts>
+    <date>2025-01-26T15:10:31+01:00</date>
+    <runTimeInMillis>350</runTimeInMillis>
+    <content>&lt;br/&gt;&lt;span class="meta"&gt;variable defined: TEST_SYSTEM=slim&lt;/span&gt;
+&lt;br/&gt;&lt;span class="meta"&gt;classpath: ../../../target/classes&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: ../../../target/test-classes&lt;/span&gt;&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td colspan="4"&gt;&lt;span class="pass"&gt;fitnesse.fixtures.ZapiszStudentaDoGrupyFixture&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;idGrupy&lt;/td&gt;
+		&lt;td&gt;nrIndeksu&lt;/td&gt;
+		&lt;td&gt;zapisany?&lt;/td&gt;
+		&lt;td&gt;liczbaStudentow&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;12345&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;true&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;1 &lt;span class="error"&gt;No Method setLiczbaStudentow[1] in class fitnesse.fixtures.ZapiszStudentaDoGrupyFixture.
+ Available methods:
+ClearSymbols() -&amp;gt; void
+callParseMethod(java.lang.Class, java.lang.String) -&amp;gt; class java.lang.Object
+camel(java.lang.String) -&amp;gt; class java.lang.String
+check(fit.Parse, fit.TypeAdapter) -&amp;gt; void
+counts() -&amp;gt; class java.lang.String
+doCell(fit.Parse, int) -&amp;gt; void
+doCells(fit.Parse) -&amp;gt; void
+doRow(fit.Parse) -&amp;gt; void
+doRows(fit.Parse) -&amp;gt; void
+doTable(fit.Parse) -&amp;gt; void
+doTables(fit.Parse) -&amp;gt; void
+equals(java.lang.Object) -&amp;gt; boolean
+escape(java.lang.String) -&amp;gt; class java.lang.String
+escape(java.lang.String, char, java.lang.String) -&amp;gt; class java.lang.String
+exception(fit.Parse, java.lang.Throwable) -&amp;gt; void
+execute() -&amp;gt; void
+getArgs() -&amp;gt; class [Ljava.lang.String;
+getArgsForTable(fit.Parse) -&amp;gt; void
+getClass() -&amp;gt; class java.lang.Class
+getSymbol(java.lang.String) -&amp;gt; class java.lang.Object
+gray(java.lang.String) -&amp;gt; class java.lang.String
+handleBlankCell(fit.Parse, fit.TypeAdapter) -&amp;gt; void
+hasParseMethod(java.lang.Class) -&amp;gt; boolean
+hasSymbol(java.lang.String) -&amp;gt; boolean
+hashCode() -&amp;gt; int
+ignore(fit.Parse) -&amp;gt; void
+isFriendlyException(java.lang.Throwable) -&amp;gt; boolean
+label(java.lang.String) -&amp;gt; class java.lang.String
+liczbaStudentow() -&amp;gt; int
+loadFixture(java.lang.String) -&amp;gt; class fit.Fixture
+notify() -&amp;gt; void
+notifyAll() -&amp;gt; void
+parse(java.lang.String, java.lang.Class) -&amp;gt; class java.lang.Object
+reset() -&amp;gt; void
+right(fit.Parse) -&amp;gt; void
+setForcedAbort(boolean) -&amp;gt; void
+setIdGrupy(int) -&amp;gt; void
+setNrIndeksu(int) -&amp;gt; void
+setSymbol(java.lang.String, java.lang.Object) -&amp;gt; void
+toString() -&amp;gt; class java.lang.String
+wait() -&amp;gt; void
+wait(long) -&amp;gt; void
+wait(long, int) -&amp;gt; void
+wrong(fit.Parse) -&amp;gt; void
+wrong(fit.Parse, java.lang.String) -&amp;gt; void
+zapisany() -&amp;gt; boolean&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;67890&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;false&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;1 &lt;span class="error"&gt;No Method setLiczbaStudentow[1] in class fitnesse.fixtures.ZapiszStudentaDoGrupyFixture.
+ Available methods:
+ClearSymbols() -&amp;gt; void
+callParseMethod(java.lang.Class, java.lang.String) -&amp;gt; class java.lang.Object
+camel(java.lang.String) -&amp;gt; class java.lang.String
+check(fit.Parse, fit.TypeAdapter) -&amp;gt; void
+counts() -&amp;gt; class java.lang.String
+doCell(fit.Parse, int) -&amp;gt; void
+doCells(fit.Parse) -&amp;gt; void
+doRow(fit.Parse) -&amp;gt; void
+doRows(fit.Parse) -&amp;gt; void
+doTable(fit.Parse) -&amp;gt; void
+doTables(fit.Parse) -&amp;gt; void
+equals(java.lang.Object) -&amp;gt; boolean
+escape(java.lang.String) -&amp;gt; class java.lang.String
+escape(java.lang.String, char, java.lang.String) -&amp;gt; class java.lang.String
+exception(fit.Parse, java.lang.Throwable) -&amp;gt; void
+execute() -&amp;gt; void
+getArgs() -&amp;gt; class [Ljava.lang.String;
+getArgsForTable(fit.Parse) -&amp;gt; void
+getClass() -&amp;gt; class java.lang.Class
+getSymbol(java.lang.String) -&amp;gt; class java.lang.Object
+gray(java.lang.String) -&amp;gt; class java.lang.String
+handleBlankCell(fit.Parse, fit.TypeAdapter) -&amp;gt; void
+hasParseMethod(java.lang.Class) -&amp;gt; boolean
+hasSymbol(java.lang.String) -&amp;gt; boolean
+hashCode() -&amp;gt; int
+ignore(fit.Parse) -&amp;gt; void
+isFriendlyException(java.lang.Throwable) -&amp;gt; boolean
+label(java.lang.String) -&amp;gt; class java.lang.String
+liczbaStudentow() -&amp;gt; int
+loadFixture(java.lang.String) -&amp;gt; class fit.Fixture
+notify() -&amp;gt; void
+notifyAll() -&amp;gt; void
+parse(java.lang.String, java.lang.Class) -&amp;gt; class java.lang.Object
+reset() -&amp;gt; void
+right(fit.Parse) -&amp;gt; void
+setForcedAbort(boolean) -&amp;gt; void
+setIdGrupy(int) -&amp;gt; void
+setNrIndeksu(int) -&amp;gt; void
+setSymbol(java.lang.String, java.lang.Object) -&amp;gt; void
+toString() -&amp;gt; class java.lang.String
+wait() -&amp;gt; void
+wait(long) -&amp;gt; void
+wait(long, int) -&amp;gt; void
+wrong(fit.Parse) -&amp;gt; void
+wrong(fit.Parse, java.lang.String) -&amp;gt; void
+zapisany() -&amp;gt; boolean&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;12345&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;false&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;-1 &lt;span class="error"&gt;No Method setLiczbaStudentow[1] in class fitnesse.fixtures.ZapiszStudentaDoGrupyFixture.
+ Available methods:
+ClearSymbols() -&amp;gt; void
+callParseMethod(java.lang.Class, java.lang.String) -&amp;gt; class java.lang.Object
+camel(java.lang.String) -&amp;gt; class java.lang.String
+check(fit.Parse, fit.TypeAdapter) -&amp;gt; void
+counts() -&amp;gt; class java.lang.String
+doCell(fit.Parse, int) -&amp;gt; void
+doCells(fit.Parse) -&amp;gt; void
+doRow(fit.Parse) -&amp;gt; void
+doRows(fit.Parse) -&amp;gt; void
+doTable(fit.Parse) -&amp;gt; void
+doTables(fit.Parse) -&amp;gt; void
+equals(java.lang.Object) -&amp;gt; boolean
+escape(java.lang.String) -&amp;gt; class java.lang.String
+escape(java.lang.String, char, java.lang.String) -&amp;gt; class java.lang.String
+exception(fit.Parse, java.lang.Throwable) -&amp;gt; void
+execute() -&amp;gt; void
+getArgs() -&amp;gt; class [Ljava.lang.String;
+getArgsForTable(fit.Parse) -&amp;gt; void
+getClass() -&amp;gt; class java.lang.Class
+getSymbol(java.lang.String) -&amp;gt; class java.lang.Object
+gray(java.lang.String) -&amp;gt; class java.lang.String
+handleBlankCell(fit.Parse, fit.TypeAdapter) -&amp;gt; void
+hasParseMethod(java.lang.Class) -&amp;gt; boolean
+hasSymbol(java.lang.String) -&amp;gt; boolean
+hashCode() -&amp;gt; int
+ignore(fit.Parse) -&amp;gt; void
+isFriendlyException(java.lang.Throwable) -&amp;gt; boolean
+label(java.lang.String) -&amp;gt; class java.lang.String
+liczbaStudentow() -&amp;gt; int
+loadFixture(java.lang.String) -&amp;gt; class fit.Fixture
+notify() -&amp;gt; void
+notifyAll() -&amp;gt; void
+parse(java.lang.String, java.lang.Class) -&amp;gt; class java.lang.Object
+reset() -&amp;gt; void
+right(fit.Parse) -&amp;gt; void
+setForcedAbort(boolean) -&amp;gt; void
+setIdGrupy(int) -&amp;gt; void
+setNrIndeksu(int) -&amp;gt; void
+setSymbol(java.lang.String, java.lang.Object) -&amp;gt; void
+toString() -&amp;gt; class java.lang.String
+wait() -&amp;gt; void
+wait(long) -&amp;gt; void
+wait(long, int) -&amp;gt; void
+wrong(fit.Parse) -&amp;gt; void
+wrong(fit.Parse, java.lang.String) -&amp;gt; void
+zapisany() -&amp;gt; boolean&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;12345&lt;/td&gt;
+		&lt;td&gt;[&lt;span class="diff"&gt;fals&lt;/span&gt;e] &lt;span class="fail"&gt;expected [&lt;span class="diff"&gt;tru&lt;/span&gt;e]&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;1 &lt;span class="error"&gt;No Method setLiczbaStudentow[1] in class fitnesse.fixtures.ZapiszStudentaDoGrupyFixture.
+ Available methods:
+ClearSymbols() -&amp;gt; void
+callParseMethod(java.lang.Class, java.lang.String) -&amp;gt; class java.lang.Object
+camel(java.lang.String) -&amp;gt; class java.lang.String
+check(fit.Parse, fit.TypeAdapter) -&amp;gt; void
+counts() -&amp;gt; class java.lang.String
+doCell(fit.Parse, int) -&amp;gt; void
+doCells(fit.Parse) -&amp;gt; void
+doRow(fit.Parse) -&amp;gt; void
+doRows(fit.Parse) -&amp;gt; void
+doTable(fit.Parse) -&amp;gt; void
+doTables(fit.Parse) -&amp;gt; void
+equals(java.lang.Object) -&amp;gt; boolean
+escape(java.lang.String) -&amp;gt; class java.lang.String
+escape(java.lang.String, char, java.lang.String) -&amp;gt; class java.lang.String
+exception(fit.Parse, java.lang.Throwable) -&amp;gt; void
+execute() -&amp;gt; void
+getArgs() -&amp;gt; class [Ljava.lang.String;
+getArgsForTable(fit.Parse) -&amp;gt; void
+getClass() -&amp;gt; class java.lang.Class
+getSymbol(java.lang.String) -&amp;gt; class java.lang.Object
+gray(java.lang.String) -&amp;gt; class java.lang.String
+handleBlankCell(fit.Parse, fit.TypeAdapter) -&amp;gt; void
+hasParseMethod(java.lang.Class) -&amp;gt; boolean
+hasSymbol(java.lang.String) -&amp;gt; boolean
+hashCode() -&amp;gt; int
+ignore(fit.Parse) -&amp;gt; void
+isFriendlyException(java.lang.Throwable) -&amp;gt; boolean
+label(java.lang.String) -&amp;gt; class java.lang.String
+liczbaStudentow() -&amp;gt; int
+loadFixture(java.lang.String) -&amp;gt; class fit.Fixture
+notify() -&amp;gt; void
+notifyAll() -&amp;gt; void
+parse(java.lang.String, java.lang.Class) -&amp;gt; class java.lang.Object
+reset() -&amp;gt; void
+right(fit.Parse) -&amp;gt; void
+setForcedAbort(boolean) -&amp;gt; void
+setIdGrupy(int) -&amp;gt; void
+setNrIndeksu(int) -&amp;gt; void
+setSymbol(java.lang.String, java.lang.Object) -&amp;gt; void
+toString() -&amp;gt; class java.lang.String
+wait() -&amp;gt; void
+wait(long) -&amp;gt; void
+wait(long, int) -&amp;gt; void
+wrong(fit.Parse) -&amp;gt; void
+wrong(fit.Parse, java.lang.String) -&amp;gt; void
+zapisany() -&amp;gt; boolean&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;</content>
+    <relativePageName>ZapiszStudentaDoGrupyTest</relativePageName>
+    <instructions>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_0', instruction='make', instanceName='decisionTable_0', className='fitnesse.fixtures.ZapiszStudentaDoGrupyFixture', args=[]}</instruction>
+        <slimResult>pass(fitnesse.fixtures.ZapiszStudentaDoGrupyFixture)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>decisionTable_0_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>fitnesse.fixtures.ZapiszStudentaDoGrupyFixture</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_4', instruction='call', instanceName='decisionTable_0', methodName='setIdGrupy', args=[1]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>decisionTable_0_4</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_5', instruction='call', instanceName='decisionTable_0', methodName='setNrIndeksu', args=[12345]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>decisionTable_0_5</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_6', instruction='call', instanceName='decisionTable_0', methodName='setLiczbaStudentow', args=[1]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_0_6</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>No Method setLiczbaStudentow[1] in class fitnesse.fixtures.ZapiszStudentaDoGrupyFixture.
+ Available methods:
+ClearSymbols() -&gt; void
+callParseMethod(java.lang.Class, java.lang.String) -&gt; class java.lang.Object
+camel(java.lang.String) -&gt; class java.lang.String
+check(fit.Parse, fit.TypeAdapter) -&gt; void
+counts() -&gt; class java.lang.String
+doCell(fit.Parse, int) -&gt; void
+doCells(fit.Parse) -&gt; void
+doRow(fit.Parse) -&gt; void
+doRows(fit.Parse) -&gt; void
+doTable(fit.Parse) -&gt; void
+doTables(fit.Parse) -&gt; void
+equals(java.lang.Object) -&gt; boolean
+escape(java.lang.String) -&gt; class java.lang.String
+escape(java.lang.String, char, java.lang.String) -&gt; class java.lang.String
+exception(fit.Parse, java.lang.Throwable) -&gt; void
+execute() -&gt; void
+getArgs() -&gt; class [Ljava.lang.String;
+getArgsForTable(fit.Parse) -&gt; void
+getClass() -&gt; class java.lang.Class
+getSymbol(java.lang.String) -&gt; class java.lang.Object
+gray(java.lang.String) -&gt; class java.lang.String
+handleBlankCell(fit.Parse, fit.TypeAdapter) -&gt; void
+hasParseMethod(java.lang.Class) -&gt; boolean
+hasSymbol(java.lang.String) -&gt; boolean
+hashCode() -&gt; int
+ignore(fit.Parse) -&gt; void
+isFriendlyException(java.lang.Throwable) -&gt; boolean
+label(java.lang.String) -&gt; class java.lang.String
+liczbaStudentow() -&gt; int
+loadFixture(java.lang.String) -&gt; class fit.Fixture
+notify() -&gt; void
+notifyAll() -&gt; void
+parse(java.lang.String, java.lang.Class) -&gt; class java.lang.Object
+reset() -&gt; void
+right(fit.Parse) -&gt; void
+setForcedAbort(boolean) -&gt; void
+setIdGrupy(int) -&gt; void
+setNrIndeksu(int) -&gt; void
+setSymbol(java.lang.String, java.lang.Object) -&gt; void
+toString() -&gt; class java.lang.String
+wait() -&gt; void
+wait(long) -&gt; void
+wait(long, int) -&gt; void
+wrong(fit.Parse) -&gt; void
+wrong(fit.Parse, java.lang.String) -&gt; void
+zapisany() -&gt; boolean</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_8', instruction='call', instanceName='decisionTable_0', methodName='zapisany', args=[]}</instruction>
+        <slimResult>pass(true)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>decisionTable_0_8</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>true</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_10', instruction='call', instanceName='decisionTable_0', methodName='setIdGrupy', args=[1]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>decisionTable_0_10</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_11', instruction='call', instanceName='decisionTable_0', methodName='setNrIndeksu', args=[67890]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>decisionTable_0_11</instructionId>
+          <col>1</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_12', instruction='call', instanceName='decisionTable_0', methodName='setLiczbaStudentow', args=[1]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_0_12</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>No Method setLiczbaStudentow[1] in class fitnesse.fixtures.ZapiszStudentaDoGrupyFixture.
+ Available methods:
+ClearSymbols() -&gt; void
+callParseMethod(java.lang.Class, java.lang.String) -&gt; class java.lang.Object
+camel(java.lang.String) -&gt; class java.lang.String
+check(fit.Parse, fit.TypeAdapter) -&gt; void
+counts() -&gt; class java.lang.String
+doCell(fit.Parse, int) -&gt; void
+doCells(fit.Parse) -&gt; void
+doRow(fit.Parse) -&gt; void
+doRows(fit.Parse) -&gt; void
+doTable(fit.Parse) -&gt; void
+doTables(fit.Parse) -&gt; void
+equals(java.lang.Object) -&gt; boolean
+escape(java.lang.String) -&gt; class java.lang.String
+escape(java.lang.String, char, java.lang.String) -&gt; class java.lang.String
+exception(fit.Parse, java.lang.Throwable) -&gt; void
+execute() -&gt; void
+getArgs() -&gt; class [Ljava.lang.String;
+getArgsForTable(fit.Parse) -&gt; void
+getClass() -&gt; class java.lang.Class
+getSymbol(java.lang.String) -&gt; class java.lang.Object
+gray(java.lang.String) -&gt; class java.lang.String
+handleBlankCell(fit.Parse, fit.TypeAdapter) -&gt; void
+hasParseMethod(java.lang.Class) -&gt; boolean
+hasSymbol(java.lang.String) -&gt; boolean
+hashCode() -&gt; int
+ignore(fit.Parse) -&gt; void
+isFriendlyException(java.lang.Throwable) -&gt; boolean
+label(java.lang.String) -&gt; class java.lang.String
+liczbaStudentow() -&gt; int
+loadFixture(java.lang.String) -&gt; class fit.Fixture
+notify() -&gt; void
+notifyAll() -&gt; void
+parse(java.lang.String, java.lang.Class) -&gt; class java.lang.Object
+reset() -&gt; void
+right(fit.Parse) -&gt; void
+setForcedAbort(boolean) -&gt; void
+setIdGrupy(int) -&gt; void
+setNrIndeksu(int) -&gt; void
+setSymbol(java.lang.String, java.lang.Object) -&gt; void
+toString() -&gt; class java.lang.String
+wait() -&gt; void
+wait(long) -&gt; void
+wait(long, int) -&gt; void
+wrong(fit.Parse) -&gt; void
+wrong(fit.Parse, java.lang.String) -&gt; void
+zapisany() -&gt; boolean</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_14', instruction='call', instanceName='decisionTable_0', methodName='zapisany', args=[]}</instruction>
+        <slimResult>pass(false)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>decisionTable_0_14</instructionId>
+          <col>2</col>
+          <row>3</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>false</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_16', instruction='call', instanceName='decisionTable_0', methodName='setIdGrupy', args=[2]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>decisionTable_0_16</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_17', instruction='call', instanceName='decisionTable_0', methodName='setNrIndeksu', args=[12345]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>decisionTable_0_17</instructionId>
+          <col>1</col>
+          <row>4</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_18', instruction='call', instanceName='decisionTable_0', methodName='setLiczbaStudentow', args=[-1]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_0_18</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>No Method setLiczbaStudentow[1] in class fitnesse.fixtures.ZapiszStudentaDoGrupyFixture.
+ Available methods:
+ClearSymbols() -&gt; void
+callParseMethod(java.lang.Class, java.lang.String) -&gt; class java.lang.Object
+camel(java.lang.String) -&gt; class java.lang.String
+check(fit.Parse, fit.TypeAdapter) -&gt; void
+counts() -&gt; class java.lang.String
+doCell(fit.Parse, int) -&gt; void
+doCells(fit.Parse) -&gt; void
+doRow(fit.Parse) -&gt; void
+doRows(fit.Parse) -&gt; void
+doTable(fit.Parse) -&gt; void
+doTables(fit.Parse) -&gt; void
+equals(java.lang.Object) -&gt; boolean
+escape(java.lang.String) -&gt; class java.lang.String
+escape(java.lang.String, char, java.lang.String) -&gt; class java.lang.String
+exception(fit.Parse, java.lang.Throwable) -&gt; void
+execute() -&gt; void
+getArgs() -&gt; class [Ljava.lang.String;
+getArgsForTable(fit.Parse) -&gt; void
+getClass() -&gt; class java.lang.Class
+getSymbol(java.lang.String) -&gt; class java.lang.Object
+gray(java.lang.String) -&gt; class java.lang.String
+handleBlankCell(fit.Parse, fit.TypeAdapter) -&gt; void
+hasParseMethod(java.lang.Class) -&gt; boolean
+hasSymbol(java.lang.String) -&gt; boolean
+hashCode() -&gt; int
+ignore(fit.Parse) -&gt; void
+isFriendlyException(java.lang.Throwable) -&gt; boolean
+label(java.lang.String) -&gt; class java.lang.String
+liczbaStudentow() -&gt; int
+loadFixture(java.lang.String) -&gt; class fit.Fixture
+notify() -&gt; void
+notifyAll() -&gt; void
+parse(java.lang.String, java.lang.Class) -&gt; class java.lang.Object
+reset() -&gt; void
+right(fit.Parse) -&gt; void
+setForcedAbort(boolean) -&gt; void
+setIdGrupy(int) -&gt; void
+setNrIndeksu(int) -&gt; void
+setSymbol(java.lang.String, java.lang.Object) -&gt; void
+toString() -&gt; class java.lang.String
+wait() -&gt; void
+wait(long) -&gt; void
+wait(long, int) -&gt; void
+wrong(fit.Parse) -&gt; void
+wrong(fit.Parse, java.lang.String) -&gt; void
+zapisany() -&gt; boolean</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_20', instruction='call', instanceName='decisionTable_0', methodName='zapisany', args=[]}</instruction>
+        <slimResult>pass(false)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>decisionTable_0_20</instructionId>
+          <col>2</col>
+          <row>4</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>false</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_22', instruction='call', instanceName='decisionTable_0', methodName='setIdGrupy', args=[1]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>decisionTable_0_22</instructionId>
+          <col>0</col>
+          <row>5</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_23', instruction='call', instanceName='decisionTable_0', methodName='setNrIndeksu', args=[12345]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>decisionTable_0_23</instructionId>
+          <col>1</col>
+          <row>5</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_24', instruction='call', instanceName='decisionTable_0', methodName='setLiczbaStudentow', args=[1]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_0_24</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>No Method setLiczbaStudentow[1] in class fitnesse.fixtures.ZapiszStudentaDoGrupyFixture.
+ Available methods:
+ClearSymbols() -&gt; void
+callParseMethod(java.lang.Class, java.lang.String) -&gt; class java.lang.Object
+camel(java.lang.String) -&gt; class java.lang.String
+check(fit.Parse, fit.TypeAdapter) -&gt; void
+counts() -&gt; class java.lang.String
+doCell(fit.Parse, int) -&gt; void
+doCells(fit.Parse) -&gt; void
+doRow(fit.Parse) -&gt; void
+doRows(fit.Parse) -&gt; void
+doTable(fit.Parse) -&gt; void
+doTables(fit.Parse) -&gt; void
+equals(java.lang.Object) -&gt; boolean
+escape(java.lang.String) -&gt; class java.lang.String
+escape(java.lang.String, char, java.lang.String) -&gt; class java.lang.String
+exception(fit.Parse, java.lang.Throwable) -&gt; void
+execute() -&gt; void
+getArgs() -&gt; class [Ljava.lang.String;
+getArgsForTable(fit.Parse) -&gt; void
+getClass() -&gt; class java.lang.Class
+getSymbol(java.lang.String) -&gt; class java.lang.Object
+gray(java.lang.String) -&gt; class java.lang.String
+handleBlankCell(fit.Parse, fit.TypeAdapter) -&gt; void
+hasParseMethod(java.lang.Class) -&gt; boolean
+hasSymbol(java.lang.String) -&gt; boolean
+hashCode() -&gt; int
+ignore(fit.Parse) -&gt; void
+isFriendlyException(java.lang.Throwable) -&gt; boolean
+label(java.lang.String) -&gt; class java.lang.String
+liczbaStudentow() -&gt; int
+loadFixture(java.lang.String) -&gt; class fit.Fixture
+notify() -&gt; void
+notifyAll() -&gt; void
+parse(java.lang.String, java.lang.Class) -&gt; class java.lang.Object
+reset() -&gt; void
+right(fit.Parse) -&gt; void
+setForcedAbort(boolean) -&gt; void
+setIdGrupy(int) -&gt; void
+setNrIndeksu(int) -&gt; void
+setSymbol(java.lang.String, java.lang.Object) -&gt; void
+toString() -&gt; class java.lang.String
+wait() -&gt; void
+wait(long) -&gt; void
+wait(long, int) -&gt; void
+wrong(fit.Parse) -&gt; void
+wrong(fit.Parse, java.lang.String) -&gt; void
+zapisany() -&gt; boolean</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_26', instruction='call', instanceName='decisionTable_0', methodName='zapisany', args=[]}</instruction>
+        <slimResult>fail(a=false;e=true)</slimResult>
+        <expectation>
+          <status>fail</status>
+          <instructionId>decisionTable_0_26</instructionId>
+          <col>2</col>
+          <row>5</row>
+          <type>ReturnedValueExpectation</type>
+          <actual>false</actual>
+          <expected>true</expected>
+        </expectation>
+      </instructionResult>
+    </instructions>
+  </result>
+  <executionLog>
+    <testSystem>slim:fitnesse.slim.SlimService</testSystem>
+    <command>java -cp ../../../target/classes:../../../target/test-classes:SystemZapisow/target/classes:SystemZapisow/target/test-classes:SystemZapisow/test/java:../target/classes:../target/test-classes:/home/milolew/PWR/IO/SystemZapisow/src/test/fitnesse/fitnesse-standalone.jar fitnesse.slim.SlimService 1</command>
+    <exitCode>0</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>1</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>558</totalRunTimeInMillis>
+</testResults>
+

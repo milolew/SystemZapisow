@@ -1,0 +1,7 @@
+!define TEST_SYSTEM {slim}
+
+!path SystemZapisow/target/classes
+!path SystemZapisow/target/test-classes
+!path SystemZapisow/test/java
+
+!contents -R2 -g -p -f -h

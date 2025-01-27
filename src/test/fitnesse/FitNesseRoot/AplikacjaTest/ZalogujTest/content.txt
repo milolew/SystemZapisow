@@ -1,0 +1,13 @@
+!define TEST_SYSTEM {fit}
+!path ../../../target/classes
+!path ../../../target/test-classes
+
+
+!|fitnesse.fixtures.ZalogujFixture|
+|login|haslo|loginResult?|
+|student123456|password|true|
+|student234567|password|true|
+|pracownik|password|true|
+|pracownik_123|password|false|
+|student123456|zlehaslo|false|
+|student|password|false|

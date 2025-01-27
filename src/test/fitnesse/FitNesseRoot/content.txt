@@ -1,0 +1,4 @@
+!path ../target/classes
+!path ../target/test-classes
+
+!contents -R2 -g -p -f -h

@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20241207</FitNesseVersion>
+  <rootPath>AplikacjaTest.PrzeniesStudentowTest</rootPath>
+  <result>
+    <counts>
+      <right>7</right>
+      <wrong>5</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <date>2025-01-27T19:37:11+01:00</date>
+    <runTimeInMillis>2</runTimeInMillis>
+    <content>&lt;br/&gt;&lt;span class="meta"&gt;variable defined: TEST_SYSTEM=fit&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: ../../../target/classes&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: ../../../target/test-classes&lt;/span&gt;&lt;br/&gt;&lt;br/&gt;&lt;h1 id="0"&gt;Testy przenoszenia studentów między grupami&lt;/h1&gt;
+Test sprawdza różne scenariusze przenoszenia studentów między grupami zajęciowymi wraz z weryfikacją wyświetlanych komunikatów.&lt;br/&gt;&lt;br/&gt;&lt;h2 id="1"&gt;Udane przeniesienie studentów&lt;/h2&gt;
+Sprawdzenie czy studenci mogą zostać przeniesieni do grupy z wystarczającą liczbą miejsc&lt;br/&gt;(Grupa 2 - ćwiczenia z IO posiadają studentów, Grupa 3 - laboratorium jest tego samego typu i ma wolne miejsca).&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="5"&gt;fitnesse.fixtures.PrzeniesStudentowFixture&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;idGrupyZrodlowej&lt;/td&gt;
+		&lt;td&gt;idGrupyDocelowej&lt;/td&gt;
+		&lt;td&gt;przenies?&lt;/td&gt;
+		&lt;td&gt;poprawnyKomunikat?&lt;/td&gt;
+		&lt;td&gt;komunikat&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;3&lt;/td&gt;
+		&lt;td class="pass"&gt;true&lt;/td&gt;
+		&lt;td class="pass"&gt;true&lt;/td&gt;
+		&lt;td&gt; &lt;span class="fit_grey"&gt;Raport przeniesienia:
+Student 123456 - przeniesiony pomyślnie
+&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h2 id="2"&gt;Próba przeniesienia z pustej grupy&lt;/h2&gt;
+Sprawdzenie czy system prawidłowo obsługuje próbę przeniesienia z grupy bez studentów&lt;br/&gt;(Grupa 9 - laboratorium jest pusta).&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="5"&gt;fitnesse.fixtures.PrzeniesStudentowFixture&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;idGrupyZrodlowej&lt;/td&gt;
+		&lt;td&gt;idGrupyDocelowej&lt;/td&gt;
+		&lt;td&gt;przenies?&lt;/td&gt;
+		&lt;td&gt;poprawnyKomunikat?&lt;/td&gt;
+		&lt;td&gt;komunikat&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;9&lt;/td&gt;
+		&lt;td&gt;7&lt;/td&gt;
+		&lt;td class="pass"&gt;false&lt;/td&gt;
+		&lt;td class="fail"&gt;true &lt;span class="fit_label"&gt;expected&lt;/span&gt;&lt;hr&gt;false &lt;span class="fit_label"&gt;actual&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;Grupa źródłowa jest pusta!&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h2 id="3"&gt;Przeniesienie między różnymi typami zajęć&lt;/h2&gt;
+Sprawdzenie czy system prawidłowo obsługuje próbę przeniesienia studentów między grupami różnych typów&lt;br/&gt;(Grupa 1 - wykład, Grupa 4 - laboratorium).&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="5"&gt;fitnesse.fixtures.PrzeniesStudentowFixture&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;idGrupyZrodlowej&lt;/td&gt;
+		&lt;td&gt;idGrupyDocelowej&lt;/td&gt;
+		&lt;td&gt;przenies?&lt;/td&gt;
+		&lt;td&gt;poprawnyKomunikat?&lt;/td&gt;
+		&lt;td&gt;komunikat&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;4&lt;/td&gt;
+		&lt;td class="pass"&gt;false&lt;/td&gt;
+		&lt;td class="fail"&gt;true &lt;span class="fit_label"&gt;expected&lt;/span&gt;&lt;hr&gt;false &lt;span class="fit_label"&gt;actual&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;Grupy muszą należeć do tego samego przedmiotu!&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h2 id="4"&gt;Przeniesienie do grupy innego przedmiotu&lt;/h2&gt;
+Sprawdzenie czy system blokuje przeniesienie do grupy z innego przedmiotu&lt;br/&gt;(Grupa 2 - IO, Grupa 21 - PO).&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="5"&gt;fitnesse.fixtures.PrzeniesStudentowFixture&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;idGrupyZrodlowej&lt;/td&gt;
+		&lt;td&gt;idGrupyDocelowej&lt;/td&gt;
+		&lt;td&gt;przenies?&lt;/td&gt;
+		&lt;td&gt;poprawnyKomunikat?&lt;/td&gt;
+		&lt;td&gt;komunikat&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;21&lt;/td&gt;
+		&lt;td class="pass"&gt;false&lt;/td&gt;
+		&lt;td class="fail"&gt;true &lt;span class="fit_label"&gt;expected&lt;/span&gt;&lt;hr&gt;false &lt;span class="fit_label"&gt;actual&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;Grupy muszą należeć do tego samego przedmiotu!&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h2 id="5"&gt;Przeniesienie między kierunkami&lt;/h2&gt;
+Sprawdzenie czy system blokuje przeniesienie między grupami z różnych kierunków&lt;br/&gt;(Grupa 4 - INF, Grupa 15 - IS).&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="5"&gt;fitnesse.fixtures.PrzeniesStudentowFixture&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;idGrupyZrodlowej&lt;/td&gt;
+		&lt;td&gt;idGrupyDocelowej&lt;/td&gt;
+		&lt;td&gt;przenies?&lt;/td&gt;
+		&lt;td&gt;poprawnyKomunikat?&lt;/td&gt;
+		&lt;td&gt;komunikat&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;4&lt;/td&gt;
+		&lt;td&gt;15&lt;/td&gt;
+		&lt;td class="pass"&gt;false&lt;/td&gt;
+		&lt;td class="fail"&gt;true &lt;span class="fit_label"&gt;expected&lt;/span&gt;&lt;hr&gt;false &lt;span class="fit_label"&gt;actual&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;Grupy muszą należeć do tego samego kierunku!&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h2 id="6"&gt;Przeniesienie do nieistniejącej grupy&lt;/h2&gt;
+Sprawdzenie czy system prawidłowo obsługuje próbę przeniesienia do nieistniejącej grupy.&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="5"&gt;fitnesse.fixtures.PrzeniesStudentowFixture&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;idGrupyZrodlowej&lt;/td&gt;
+		&lt;td&gt;idGrupyDocelowej&lt;/td&gt;
+		&lt;td&gt;przenies?&lt;/td&gt;
+		&lt;td&gt;poprawnyKomunikat?&lt;/td&gt;
+		&lt;td&gt;komunikat&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;99&lt;/td&gt;
+		&lt;td class="pass"&gt;false&lt;/td&gt;
+		&lt;td class="fail"&gt;true &lt;span class="fit_label"&gt;expected&lt;/span&gt;&lt;hr&gt;false &lt;span class="fit_label"&gt;actual&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;Jedna z grup nie istnieje!&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>PrzeniesStudentowTest</relativePageName>
+  </result>
+  <executionLog>
+    <testSystem>fit:fit.FitServer</testSystem>
+    <command>java -cp ../../../target/classes:../../../target/test-classes:SystemZapisow/target/classes:SystemZapisow/target/test-classes:SystemZapisow/test/java:../target/classes:../target/test-classes:/home/milolew/PWR/IO/SystemZapisow/src/test/fitnesse/fitnesse-standalone.jar fit.FitServer milolew 33895 3863</command>
+    <exitCode>5</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>1</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>359</totalRunTimeInMillis>
+</testResults>
+

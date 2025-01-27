@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20241207</FitNesseVersion>
+  <rootPath>FasadaAktualizacjiTest</rootPath>
+  <result>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>1</exceptions>
+    </counts>
+    <date>2025-01-26T11:25:09+01:00</date>
+    <runTimeInMillis>301</runTimeInMillis>
+    <content>
+&lt;span class="error"&gt;Exception occurred: &lt;hr&gt;&lt;pre&gt;&lt;div class="fit_stacktrace"&gt;fit.exception.FitParseException: Can't find tag: table
+	at fit.Parse.findMatchingEndTag(Parse.java:89)
+	at fit.Parse.&lt;init&gt;(Parse.java:49)
+	at fit.Parse.&lt;init&gt;(Parse.java:37)
+	at fit.FitServer.process(FitServer.java:80)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at fitnesse.testsystems.fit.CommandRunningFitClient$InProcessCommandRunner$1.run(CommandRunningFitClient.java:256)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+&lt;/div&gt;&lt;/pre&gt;&lt;/span&gt;</content>
+    <relativePageName>FasadaAktualizacjiTest</relativePageName>
+  </result>
+  <executionLog>
+    <testSystem>fit:fit.FitServer</testSystem>
+    <command></command>
+    <exitCode>0</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>1</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>556</totalRunTimeInMillis>
+</testResults>
+

@@ -1,0 +1,250 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20241207</FitNesseVersion>
+  <rootPath>AplikacjaTest.ZapiszDoGrupyTest</rootPath>
+  <result>
+    <counts>
+      <right>6</right>
+      <wrong>1</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <date>2025-01-26T21:12:21+01:00</date>
+    <runTimeInMillis>164</runTimeInMillis>
+    <content>&lt;br/&gt;&lt;span class="meta"&gt;variable defined: TEST_SYSTEM=fit&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: ../../../target/classes&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: ../../../target/test-classes&lt;/span&gt;&lt;br/&gt;&lt;br/&gt;&lt;h1 id="0"&gt;Testy zapisywania do grup&lt;/h1&gt;
+Test sprawdza różne scenariusze zapisywania studenta do grupy zajęciowej.&lt;br/&gt;&lt;br/&gt;&lt;h2 id="1"&gt;Udany zapis do grupy&lt;/h2&gt;
+Sprawdzenie czy student może zapisać się do grupy, która ma wolne miejsca.&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="11"&gt;fitnesse.fixtures.ZapiszDoGrupyFixture&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;login&lt;/td&gt;
+		&lt;td&gt;idGrupy&lt;/td&gt;
+		&lt;td&gt;godzRozpoczecia&lt;/td&gt;
+		&lt;td&gt;godzZakonczenia&lt;/td&gt;
+		&lt;td&gt;dzienTyg&lt;/td&gt;
+		&lt;td&gt;limitMiejsc&lt;/td&gt;
+		&lt;td&gt;prowadzacyImie&lt;/td&gt;
+		&lt;td&gt;prowadzacyNazwisko&lt;/td&gt;
+		&lt;td&gt;prowadzacyTytul&lt;/td&gt;
+		&lt;td&gt;rodzajGrupy&lt;/td&gt;
+		&lt;td&gt;zapisz?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;student123456&lt;/td&gt;
+		&lt;td&gt;4&lt;/td&gt;
+		&lt;td&gt;14:00&lt;/td&gt;
+		&lt;td&gt;15:30&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;15&lt;/td&gt;
+		&lt;td&gt;Piotr&lt;/td&gt;
+		&lt;td&gt;Wiśniewski&lt;/td&gt;
+		&lt;td&gt;prof.&lt;/td&gt;
+		&lt;td&gt;LABORATORIUM&lt;/td&gt;
+		&lt;td class="fail"&gt;true &lt;span class="fit_label"&gt;expected&lt;/span&gt;&lt;hr&gt;false &lt;span class="fit_label"&gt;actual&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;student234567&lt;/td&gt;
+		&lt;td&gt;8&lt;/td&gt;
+		&lt;td&gt;14:00&lt;/td&gt;
+		&lt;td&gt;15:30&lt;/td&gt;
+		&lt;td&gt;4&lt;/td&gt;
+		&lt;td&gt;15&lt;/td&gt;
+		&lt;td&gt;Maria&lt;/td&gt;
+		&lt;td&gt;Kowalczyk&lt;/td&gt;
+		&lt;td&gt;dr inż.&lt;/td&gt;
+		&lt;td&gt;LABORATORIUM&lt;/td&gt;
+		&lt;td class="pass"&gt;true&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;student2137&lt;/td&gt;
+		&lt;td&gt;12&lt;/td&gt;
+		&lt;td&gt;14:00&lt;/td&gt;
+		&lt;td&gt;15:30&lt;/td&gt;
+		&lt;td&gt;4&lt;/td&gt;
+		&lt;td&gt;30&lt;/td&gt;
+		&lt;td&gt;Jan&lt;/td&gt;
+		&lt;td&gt;Kowalski&lt;/td&gt;
+		&lt;td&gt;dr&lt;/td&gt;
+		&lt;td&gt;CWICZENIA&lt;/td&gt;
+		&lt;td class="pass"&gt;true&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h2 id="2"&gt;Próba zapisu do pełnej grupy&lt;/h2&gt;
+Sprawdzenie czy system prawidłowo odrzuca próbę zapisu do grupy bez wolnych miejsc.&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="11"&gt;fitnesse.fixtures.ZapiszDoGrupyFixture&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;login&lt;/td&gt;
+		&lt;td&gt;idGrupy&lt;/td&gt;
+		&lt;td&gt;godzRozpoczecia&lt;/td&gt;
+		&lt;td&gt;godzZakonczenia&lt;/td&gt;
+		&lt;td&gt;dzienTyg&lt;/td&gt;
+		&lt;td&gt;limitMiejsc&lt;/td&gt;
+		&lt;td&gt;prowadzacyImie&lt;/td&gt;
+		&lt;td&gt;prowadzacyNazwisko&lt;/td&gt;
+		&lt;td&gt;prowadzacyTytul&lt;/td&gt;
+		&lt;td&gt;rodzajGrupy&lt;/td&gt;
+		&lt;td&gt;zapisz?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;student123456&lt;/td&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;08:00&lt;/td&gt;
+		&lt;td&gt;09:30&lt;/td&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;120&lt;/td&gt;
+		&lt;td&gt;Jan&lt;/td&gt;
+		&lt;td&gt;Kowalski&lt;/td&gt;
+		&lt;td&gt;dr&lt;/td&gt;
+		&lt;td&gt;WYKLAD&lt;/td&gt;
+		&lt;td class="pass"&gt;false&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;student234567&lt;/td&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;08:00&lt;/td&gt;
+		&lt;td&gt;09:30&lt;/td&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;120&lt;/td&gt;
+		&lt;td&gt;Jan&lt;/td&gt;
+		&lt;td&gt;Kowalski&lt;/td&gt;
+		&lt;td&gt;dr&lt;/td&gt;
+		&lt;td&gt;WYKLAD&lt;/td&gt;
+		&lt;td class="pass"&gt;false&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h2 id="3"&gt;Próba ponownego zapisu do tej samej grupy&lt;/h2&gt;
+Sprawdzenie czy system prawidłowo odrzuca próbę ponownego zapisu do tej samej grupy.&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="11"&gt;fitnesse.fixtures.ZapiszDoGrupyFixture&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;login&lt;/td&gt;
+		&lt;td&gt;idGrupy&lt;/td&gt;
+		&lt;td&gt;godzRozpoczecia&lt;/td&gt;
+		&lt;td&gt;godzZakonczenia&lt;/td&gt;
+		&lt;td&gt;dzienTyg&lt;/td&gt;
+		&lt;td&gt;limitMiejsc&lt;/td&gt;
+		&lt;td&gt;prowadzacyImie&lt;/td&gt;
+		&lt;td&gt;prowadzacyNazwisko&lt;/td&gt;
+		&lt;td&gt;prowadzacyTytul&lt;/td&gt;
+		&lt;td&gt;rodzajGrupy&lt;/td&gt;
+		&lt;td&gt;zapisz?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;student123456&lt;/td&gt;
+		&lt;td&gt;4&lt;/td&gt;
+		&lt;td&gt;14:00&lt;/td&gt;
+		&lt;td&gt;15:30&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;15&lt;/td&gt;
+		&lt;td&gt;Piotr&lt;/td&gt;
+		&lt;td&gt;Wiśniewski&lt;/td&gt;
+		&lt;td&gt;prof.&lt;/td&gt;
+		&lt;td&gt;LABORATORIUM&lt;/td&gt;
+		&lt;td class="pass"&gt;false&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;student234567&lt;/td&gt;
+		&lt;td&gt;8&lt;/td&gt;
+		&lt;td&gt;14:00&lt;/td&gt;
+		&lt;td&gt;15:30&lt;/td&gt;
+		&lt;td&gt;4&lt;/td&gt;
+		&lt;td&gt;15&lt;/td&gt;
+		&lt;td&gt;Maria&lt;/td&gt;
+		&lt;td&gt;Kowalczyk&lt;/td&gt;
+		&lt;td&gt;dr inż.&lt;/td&gt;
+		&lt;td&gt;LABORATORIUM&lt;/td&gt;
+		&lt;td class="pass"&gt;false&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>ZapiszDoGrupyTest</relativePageName>
+  </result>
+  <executionLog>
+    <testSystem>fit:fit.FitServer</testSystem>
+    <command>java -cp ../../../target/classes:../../../target/test-classes:SystemZapisow/target/classes:SystemZapisow/target/test-classes:SystemZapisow/test/java:../target/classes:../target/test-classes:/home/milolew/PWR/IO/SystemZapisow/src/test/fitnesse/fitnesse-standalone.jar fit.FitServer milolew 44799 3863</command>
+    <exitCode>1</exitCode>
+    <stdOut>=== System zapisów na zajęcia ===
+Podaj login: 
+
+Menu studenta:
+1. Przystąp do tury zapisów
+2. Wyświetl plan zajęć
+0. Wyloguj
+
+Wybierz opcję: 
+Błąd: Występuje konflikt w planie zajęć
+=== System zapisów na zajęcia ===
+Podaj login: 
+
+Menu studenta:
+1. Przystąp do tury zapisów
+2. Wyświetl plan zajęć
+0. Wyloguj
+
+Wybierz opcję: 
+=== System zapisów na zajęcia ===
+Podaj login: 
+
+Menu studenta:
+1. Przystąp do tury zapisów
+2. Wyświetl plan zajęć
+0. Wyloguj
+
+Wybierz opcję: 
+=== System zapisów na zajęcia ===
+Podaj login: 
+
+Menu studenta:
+1. Przystąp do tury zapisów
+2. Wyświetl plan zajęć
+0. Wyloguj
+
+Wybierz opcję: 
+Błąd: Występuje konflikt w planie zajęć
+=== System zapisów na zajęcia ===
+Podaj login: 
+
+Menu studenta:
+1. Przystąp do tury zapisów
+2. Wyświetl plan zajęć
+0. Wyloguj
+
+Wybierz opcję: 
+Błąd: Występuje konflikt w planie zajęć
+=== System zapisów na zajęcia ===
+Podaj login: 
+
+Menu studenta:
+1. Przystąp do tury zapisów
+2. Wyświetl plan zajęć
+0. Wyloguj
+
+Wybierz opcję: 
+Błąd: Występuje konflikt w planie zajęć
+=== System zapisów na zajęcia ===
+Podaj login: 
+
+Menu studenta:
+1. Przystąp do tury zapisów
+2. Wyświetl plan zajęć
+0. Wyloguj
+
+Wybierz opcję: 
+Błąd: Występuje konflikt w planie zajęć
+</stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>1</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>548</totalRunTimeInMillis>
+</testResults>
+

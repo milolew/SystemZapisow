@@ -1,0 +1,234 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20241207</FitNesseVersion>
+  <rootPath>FasadaAktualizacjiTest.PrzeniesStudentaTest</rootPath>
+  <result>
+    <counts>
+      <right>13</right>
+      <wrong>3</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <date>2025-01-26T16:43:10+01:00</date>
+    <runTimeInMillis>189</runTimeInMillis>
+    <content>&lt;br/&gt;&lt;span class="meta"&gt;variable defined: TEST_SYSTEM=fit&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: ../../../target/classes&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: ../../../target/test-classes&lt;/span&gt;&lt;br/&gt;&lt;br/&gt;&lt;h3 id="0"&gt;Test 1: Brak grupy docelowej&lt;/h3&gt;
+Scenariusz sprawdza błąd przy próbie przeniesienia do nieistniejącej grupy:&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="5"&gt;fitnesse.fixtures.PrzeniesStudentaFixture&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;id grupy zrodlowej&lt;/td&gt;
+		&lt;td&gt;id grupy docelowej&lt;/td&gt;
+		&lt;td&gt;nr albumu&lt;/td&gt;
+		&lt;td&gt;przenies?&lt;/td&gt;
+		&lt;td&gt;komunikat bledu?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;999&lt;/td&gt;
+		&lt;td&gt;123456&lt;/td&gt;
+		&lt;td class="pass"&gt;false&lt;/td&gt;
+		&lt;td class="pass"&gt;Jedna z grup nie istnieje&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h3 id="1"&gt;Test 2: Nieistniejący student&lt;/h3&gt;
+Scenariusz sprawdza błąd przy próbie przeniesienia nieistniejącego studenta:&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="5"&gt;fitnesse.fixtures.PrzeniesStudentaFixture&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;id grupy zrodlowej&lt;/td&gt;
+		&lt;td&gt;id grupy docelowej&lt;/td&gt;
+		&lt;td&gt;nr albumu&lt;/td&gt;
+		&lt;td&gt;przenies?&lt;/td&gt;
+		&lt;td&gt;komunikat bledu?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;999999&lt;/td&gt;
+		&lt;td class="pass"&gt;false&lt;/td&gt;
+		&lt;td class="pass"&gt;Student nie istnieje&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h3 id="2"&gt;Test 3: Student nie jest członkiem grupy źródłowej&lt;/h3&gt;
+Scenariusz sprawdza błąd gdy student nie należy do grupy źródłowej:&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td&gt;fitnesse.fixtures.PrzeniesStudentaFixture&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;resetujStan?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="pass"&gt;true&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="5"&gt;fitnesse.fixtures.PrzeniesStudentaFixture&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;id grupy zrodlowej&lt;/td&gt;
+		&lt;td&gt;id grupy docelowej&lt;/td&gt;
+		&lt;td&gt;nr albumu&lt;/td&gt;
+		&lt;td&gt;przenies?&lt;/td&gt;
+		&lt;td&gt;komunikat bledu?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;123456&lt;/td&gt;
+		&lt;td class="pass"&gt;false&lt;/td&gt;
+		&lt;td class="pass"&gt;Student nie jest członkiem grupy źródłowej&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h3 id="3"&gt;Test 4: Próba przeniesienia do pełnej grupy&lt;/h3&gt;
+Scenariusz sprawdza próbę przeniesienia do grupy bez wolnych miejsc:&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;fitnesse.fixtures.PrzeniesStudentaFixture&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;ustawZajeteMiejscaGrupaDocelowa&lt;/td&gt;
+		&lt;td&gt;ustawZajeteMiejsca?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;20&lt;/td&gt;
+		&lt;td class="pass"&gt;true&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="5"&gt;fitnesse.fixtures.PrzeniesStudentaFixture&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;id grupy zrodlowej&lt;/td&gt;
+		&lt;td&gt;id grupy docelowej&lt;/td&gt;
+		&lt;td&gt;nr albumu&lt;/td&gt;
+		&lt;td&gt;przenies?&lt;/td&gt;
+		&lt;td&gt;komunikat bledu?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;123456&lt;/td&gt;
+		&lt;td class="pass"&gt;false&lt;/td&gt;
+		&lt;td&gt; &lt;span class="fit_grey"&gt;blank&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h3 id="4"&gt;Test 5: Konflikt w planie zajęć&lt;/h3&gt;
+Scenariusz sprawdza próbę przeniesienia gdy występuje konflikt czasowy:&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td&gt;fitnesse.fixtures.PrzeniesStudentaFixture&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;ustawKonfliktCzasowy&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;true&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="5"&gt;fitnesse.fixtures.PrzeniesStudentaFixture&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;id grupy zrodlowej&lt;/td&gt;
+		&lt;td&gt;id grupy docelowej&lt;/td&gt;
+		&lt;td&gt;nr albumu&lt;/td&gt;
+		&lt;td&gt;przenies?&lt;/td&gt;
+		&lt;td&gt;komunikat bledu?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;123456&lt;/td&gt;
+		&lt;td class="pass"&gt;false&lt;/td&gt;
+		&lt;td class="fail"&gt;Występuje konflikt w planie zajęć &lt;span class="fit_label"&gt;expected&lt;/span&gt;&lt;hr&gt;blank &lt;span class="fit_label"&gt;actual&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h3 id="5"&gt;Test 6: Problem z zapisem do grupy docelowej&lt;/h3&gt;
+Scenariusz sprawdza sytuację gdy nie udało się zapisać do grupy docelowej:&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td&gt;fitnesse.fixtures.PrzeniesStudentaFixture&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;ustawBlokadeZapisu&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;true&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="5"&gt;fitnesse.fixtures.PrzeniesStudentaFixture&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;id grupy zrodlowej&lt;/td&gt;
+		&lt;td&gt;id grupy docelowej&lt;/td&gt;
+		&lt;td&gt;nr albumu&lt;/td&gt;
+		&lt;td&gt;przenies?&lt;/td&gt;
+		&lt;td&gt;komunikat bledu?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;123456&lt;/td&gt;
+		&lt;td class="pass"&gt;false&lt;/td&gt;
+		&lt;td&gt; &lt;span class="fit_grey"&gt;blank&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h3 id="6"&gt;Test 7: Poprawne przeniesienie&lt;/h3&gt;
+Scenariusz sprawdza poprawne przeniesienie studenta:&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td&gt;fitnesse.fixtures.PrzeniesStudentaFixture&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;resetujStan?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="pass"&gt;true&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="7"&gt;fitnesse.fixtures.PrzeniesStudentaFixture&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;id grupy zrodlowej&lt;/td&gt;
+		&lt;td&gt;id grupy docelowej&lt;/td&gt;
+		&lt;td&gt;nr albumu&lt;/td&gt;
+		&lt;td&gt;przenies?&lt;/td&gt;
+		&lt;td&gt;komunikat bledu?&lt;/td&gt;
+		&lt;td&gt;liczba studentow grupa zrodlowa?&lt;/td&gt;
+		&lt;td&gt;liczba studentow grupa docelowa?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;123456&lt;/td&gt;
+		&lt;td class="fail"&gt;true &lt;span class="fit_label"&gt;expected&lt;/span&gt;&lt;hr&gt;false &lt;span class="fit_label"&gt;actual&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt; &lt;span class="fit_grey"&gt;Student nie jest członkiem grupy źródłowej&lt;/span&gt;&lt;/td&gt;
+		&lt;td class="pass"&gt;0&lt;/td&gt;
+		&lt;td class="fail"&gt;1 &lt;span class="fit_label"&gt;expected&lt;/span&gt;&lt;hr&gt;0 &lt;span class="fit_label"&gt;actual&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>PrzeniesStudentaTest</relativePageName>
+  </result>
+  <executionLog>
+    <testSystem>fit:fit.FitServer</testSystem>
+    <command>java -cp ../../../target/classes:../../../target/test-classes:SystemZapisow/target/classes:SystemZapisow/target/test-classes:SystemZapisow/test/java:../target/classes:../target/test-classes:/home/milolew/PWR/IO/SystemZapisow/src/test/fitnesse/fitnesse-standalone.jar fit.FitServer milolew 40903 3863</command>
+    <exitCode>3</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>1</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>556</totalRunTimeInMillis>
+</testResults>
+

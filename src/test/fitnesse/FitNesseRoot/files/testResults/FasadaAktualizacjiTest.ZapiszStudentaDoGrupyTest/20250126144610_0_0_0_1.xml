@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20241207</FitNesseVersion>
+  <rootPath>FasadaAktualizacjiTest.ZapiszStudentaDoGrupyTest</rootPath>
+  <result>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>1</exceptions>
+    </counts>
+    <date>2025-01-26T14:46:10+01:00</date>
+    <runTimeInMillis>1</runTimeInMillis>
+    <content>
+&lt;span class="error"&gt;Exception occurred: &lt;hr&gt;&lt;pre&gt;&lt;div class="fit_stacktrace"&gt;fit.exception.FitParseException: Can't find tag: table
+	at fit.Parse.findMatchingEndTag(Parse.java:89)
+	at fit.Parse.&lt;init&gt;(Parse.java:49)
+	at fit.Parse.&lt;init&gt;(Parse.java:37)
+	at fit.FitServer.process(FitServer.java:80)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+&lt;/div&gt;&lt;/pre&gt;&lt;/span&gt;</content>
+    <relativePageName>ZapiszStudentaDoGrupyTest</relativePageName>
+  </result>
+  <executionLog>
+    <testSystem>fit:fit.FitServer</testSystem>
+    <command>java -cp ../../../target/classes:../../../target/test-classes:SystemZapisow/target/classes:SystemZapisow/target/test-classes:SystemZapisow/test/java:../target/classes:../target/test-classes:/home/milolew/PWR/IO/SystemZapisow/src/test/fitnesse/fitnesse-standalone.jar fit.FitServer milolew 37485 3863</command>
+    <exitCode>1</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>1</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>308</totalRunTimeInMillis>
+</testResults>
+
